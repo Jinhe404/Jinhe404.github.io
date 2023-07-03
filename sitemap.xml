@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jhcgnb.cn/posts/a98e3ede/</loc>
+    
+    <lastmod>2023-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcgnb.cn/posts/4a17b156/</loc>
+    
+    <lastmod>2023-07-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jhcgnb.cn/links/index.html</loc>
     
     <lastmod>2023-07-03</lastmod>
@@ -38,15 +56,6 @@
   </url>
   
   <url>
-    <loc>https://jhcgnb.cn/posts/4a17b156/</loc>
-    
-    <lastmod>2023-07-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://jhcgnb.cn/categories/index.html</loc>
     
     <lastmod>2023-06-30</lastmod>
@@ -64,6 +73,20 @@
   </url>
 
   
+  <url>
+    <loc>https://jhcgnb.cn/tags/Cesium/</loc>
+    <lastmod>2023-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
+  
+  <url>
+    <loc>https://jhcgnb.cn/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <lastmod>2023-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 </urlset>
