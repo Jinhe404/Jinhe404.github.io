@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jhcgnb.cn/posts/f43726f7/</loc>
+    
+    <lastmod>2023-07-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jhcgnb.cn/comment/index.html</loc>
     
     <lastmod>2023-07-03</lastmod>
@@ -76,7 +85,7 @@
 
   <url>
     <loc>https://jhcgnb.cn/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,7 +93,14 @@
   
   <url>
     <loc>https://jhcgnb.cn/tags/Cesium/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcgnb.cn/tags/Java/</loc>
+    <lastmod>2023-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -93,7 +109,7 @@
   
   <url>
     <loc>https://jhcgnb.cn/categories/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2023-07-03</lastmod>
+    <lastmod>2023-07-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -9,8 +9,34 @@
     <atom:link href="https://jhcgnb.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Mon, 03 Jul 2023 07:26:53 GMT</pubDate>
+    <pubDate>Tue, 04 Jul 2023 02:14:15 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>详解@RequestParam</title>
+      <link>https://jhcgnb.cn/posts/f43726f7/</link>
+      <guid>https://jhcgnb.cn/posts/f43726f7/</guid>
+      <pubDate>Tue, 04 Jul 2023 02:07:55 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h3 id=&quot;RequestParam&quot;&gt;&lt;a href=&quot;#RequestParam&quot; class=&quot;headerlink&quot; title=&quot;@RequestParam&quot;&gt;&lt;/a&gt;@RequestParam&lt;/h3&gt;&lt;p&gt;在Java中，&lt;code&gt;@RequestParam&lt;/</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h3 id="RequestParam"><a href="#RequestParam" class="headerlink" title="@RequestParam"></a>@RequestParam</h3><p>在Java中，<code>@RequestParam</code> 是一个注解，用于从HTTP请求中获取参数值。它通常用于Spring MVC框架中的控制器方法中，以指定方法参数应该绑定到HTTP请求中的特定参数。</p><p><code>@RequestParam</code> 可以用于处理HTTP请求的查询参数、表单参数或路径参数。它可以应用于方法的参数或方法的参数上的注解。</p><p>下面是一些示例：</p><ol><li>使用默认参数名称：</li></ol><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/example&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">exampleMethod</span><span class="params">(<span class="meta">@RequestParam</span> String param)</span> &#123;</span><br><span class="line">    <span class="comment">// 方法体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>上面的代码将尝试从HTTP请求中获取名为 “param” 的查询参数，并将其绑定到方法参数 <code>param</code>。</p><ol start="2"><li>使用自定义参数名称：</li></ol><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/example&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">exampleMethod</span><span class="params">(<span class="meta">@RequestParam(&quot;customParam&quot;)</span> String param)</span> &#123;</span><br><span class="line">    <span class="comment">// 方法体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这个示例中，<code>@RequestParam</code> 注解指定了参数的自定义名称 “customParam”，它将从HTTP请求中获取该参数，并将其绑定到方法参数 <code>param</code>。</p><ol start="3"><li>设置默认值：</li></ol><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/example&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">exampleMethod</span><span class="params">(<span class="meta">@RequestParam(value = &quot;param&quot;, defaultValue = &quot;default&quot;)</span> String param)</span> &#123;</span><br><span class="line">    <span class="comment">// 方法体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在这个示例中，如果请求中没有名为 “param” 的参数，或者参数的值为空，那么方法参数 <code>param</code> 将被设置为默认值 “default”。</p><ol start="4"><li>必需的参数：</li></ol><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@GetMapping(&quot;/example&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">exampleMethod</span><span class="params">(<span class="meta">@RequestParam(required = true)</span> String param)</span> &#123;</span><br><span class="line">    <span class="comment">// 方法体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在这个示例中，<code>@RequestParam</code> 注解的 <code>required</code> 属性被设置为 <code>true</code>，表示参数是必需的。如果请求中没有提供该参数，将会返回错误。</p><p>总结一下，<code>@RequestParam</code> 注解用于从HTTP请求中获取参数值，并将其绑定到Java方法的参数。它提供了许多选项，可以根据需要配置参数的名称、默认值和是否必需。这样，开发者可以方便地处理HTTP请求中的参数。</p>]]></content:encoded>
+      
+      
+      <category domain="https://jhcgnb.cn/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
+      
+      <category domain="https://jhcgnb.cn/tags/Java/">Java</category>
+      
+      
+      <comments>https://jhcgnb.cn/posts/f43726f7/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>Cesium面试题</title>
