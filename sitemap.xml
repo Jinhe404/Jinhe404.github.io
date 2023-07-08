@@ -2,7 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jhcgnb.cn/posts/undefined/</loc>
+    <loc>https://jhcgnb.cn/posts/239d0cb7/</loc>
+    
+    <lastmod>2023-07-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcgnb.cn/posts/467cee4/</loc>
     
     <lastmod>2023-07-08</lastmod>
     
@@ -12,6 +21,15 @@
   
   <url>
     <loc>https://jhcgnb.cn/posts/e911cef5/</loc>
+    
+    <lastmod>2023-07-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcgnb.cn/posts/undefined/</loc>
     
     <lastmod>2023-07-08</lastmod>
     
@@ -200,6 +218,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://jhcgnb.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%951/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -211,6 +236,13 @@
   
   <url>
     <loc>https://jhcgnb.cn/categories/%E5%AD%A6%E6%9C%AF/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcgnb.cn/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
