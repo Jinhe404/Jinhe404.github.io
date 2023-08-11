@@ -29,6 +29,19 @@
     
     
     <entry>
+      <title>JS面试题</title>
+      <link href="/posts/b94f3717/"/>
+      <url>/posts/b94f3717/</url>
+      
+        <content type="html"><![CDATA[<p>在 Vue 3 中，<code>v-if</code> 和 <code>v-show</code> 都是用于控制元素显示和隐藏的指令，但它们之间有一些重要的区别。</p><ol><li><p><strong>编译时条件：</strong></p><ul><li><code>v-if</code>：当条件为 <code>false</code> 时，元素及其内容不会被渲染到DOM中。只有在条件为 <code>true</code> 时，元素才会被编译并添加到DOM。</li><li><code>v-show</code>：无论条件是 <code>true</code> 还是 <code>false</code>，元素都会被编译到DOM中，但是在条件为 <code>false</code> 时，元素会被设置为 <code>display: none</code>，从而隐藏它。</li></ul></li><li><p><strong>性能：</strong></p><ul><li><code>v-if</code>：当条件频繁切换时，会有一定的性能开销，因为每次切换条件时都会重新创建和销毁元素及其组件。</li><li><code>v-show</code>：适用于频繁切换的情况，因为元素一直在DOM中，只是样式属性变化，没有重新创建和销毁的开销。</li></ul></li><li><p><strong>初始化渲染时间：</strong></p><ul><li><code>v-if</code>：如果初始条件为 <code>false</code>，则在初始渲染时不会渲染元素。</li><li><code>v-show</code>：无论初始条件是 <code>true</code> 还是 <code>false</code>，元素都会被渲染，只是在 <code>false</code> 时不会显示。</li></ul></li><li><p><strong>DOM 结构：</strong></p><ul><li><code>v-if</code>：条件为 <code>false</code> 时，元素及其内容不会在DOM中存在，DOM结构会根据条件的变化而改变。</li><li><code>v-show</code>：无论条件如何，元素始终存在于DOM中，只是样式属性变化。</li></ul></li><li><p><strong>适用场景：</strong></p><ul><li><code>v-if</code>：适用于条件很少改变的情况，或者在初始渲染时元素可能是隐藏的情况。</li><li><code>v-show</code>：适用于需要频繁切换显示和隐藏状态的情况，例如制作可展开折叠的内容块。</li></ul></li></ol><p>综上所述，选择 <code>v-if</code> 还是 <code>v-show</code> 取决于您的具体需求和项目的性能要求。如果条件很少改变，或者初始渲染时元素可能是隐藏的，可以考虑使用 <code>v-if</code>。如果需要频繁切换显示和隐藏状态，并且性能开销比较重要，可以考虑使用 <code>v-show</code>。</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>流形与非流行</title>
       <link href="/posts/467cee4/"/>
       <url>/posts/467cee4/</url>

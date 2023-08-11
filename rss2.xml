@@ -39,6 +39,32 @@
     </item>
     
     <item>
+      <title>JS面试题</title>
+      <link>https://jhcgnb.cn/posts/b94f3717/</link>
+      <guid>https://jhcgnb.cn/posts/b94f3717/</guid>
+      <pubDate>Fri, 11 Aug 2023 09:15:55 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;在 Vue 3 中，&lt;code&gt;v-if&lt;/code&gt; 和 &lt;code&gt;v-show&lt;/code&gt; 都是用于控制元素显示和隐藏的指令，但它们之间有一些重要的区别。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;编译时条件：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;c</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<p>在 Vue 3 中，<code>v-if</code> 和 <code>v-show</code> 都是用于控制元素显示和隐藏的指令，但它们之间有一些重要的区别。</p><ol><li><p><strong>编译时条件：</strong></p><ul><li><code>v-if</code>：当条件为 <code>false</code> 时，元素及其内容不会被渲染到DOM中。只有在条件为 <code>true</code> 时，元素才会被编译并添加到DOM。</li><li><code>v-show</code>：无论条件是 <code>true</code> 还是 <code>false</code>，元素都会被编译到DOM中，但是在条件为 <code>false</code> 时，元素会被设置为 <code>display: none</code>，从而隐藏它。</li></ul></li><li><p><strong>性能：</strong></p><ul><li><code>v-if</code>：当条件频繁切换时，会有一定的性能开销，因为每次切换条件时都会重新创建和销毁元素及其组件。</li><li><code>v-show</code>：适用于频繁切换的情况，因为元素一直在DOM中，只是样式属性变化，没有重新创建和销毁的开销。</li></ul></li><li><p><strong>初始化渲染时间：</strong></p><ul><li><code>v-if</code>：如果初始条件为 <code>false</code>，则在初始渲染时不会渲染元素。</li><li><code>v-show</code>：无论初始条件是 <code>true</code> 还是 <code>false</code>，元素都会被渲染，只是在 <code>false</code> 时不会显示。</li></ul></li><li><p><strong>DOM 结构：</strong></p><ul><li><code>v-if</code>：条件为 <code>false</code> 时，元素及其内容不会在DOM中存在，DOM结构会根据条件的变化而改变。</li><li><code>v-show</code>：无论条件如何，元素始终存在于DOM中，只是样式属性变化。</li></ul></li><li><p><strong>适用场景：</strong></p><ul><li><code>v-if</code>：适用于条件很少改变的情况，或者在初始渲染时元素可能是隐藏的情况。</li><li><code>v-show</code>：适用于需要频繁切换显示和隐藏状态的情况，例如制作可展开折叠的内容块。</li></ul></li></ol><p>综上所述，选择 <code>v-if</code> 还是 <code>v-show</code> 取决于您的具体需求和项目的性能要求。如果条件很少改变，或者初始渲染时元素可能是隐藏的，可以考虑使用 <code>v-if</code>。如果需要频繁切换显示和隐藏状态，并且性能开销比较重要，可以考虑使用 <code>v-show</code>。</p>]]></content:encoded>
+      
+      
+      
+      
+      <comments>https://jhcgnb.cn/posts/b94f3717/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
       <title>流形与非流行</title>
       <link>https://jhcgnb.cn/posts/467cee4/</link>
       <guid>https://jhcgnb.cn/posts/467cee4/</guid>
@@ -247,32 +273,6 @@
       
       
       <comments>https://jhcgnb.cn/posts/f4dabd3f/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>前馈神经网路</title>
-      <link>https://jhcgnb.cn/posts/169d769d/</link>
-      <guid>https://jhcgnb.cn/posts/169d769d/</guid>
-      <pubDate>Thu, 09 Mar 2023 13:01:44 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h1 id=&quot;前馈神经网路&quot;&gt;&lt;a href=&quot;#前馈神经网路&quot; class=&quot;headerlink&quot; title=&quot;前馈神经网路&quot;&gt;&lt;/a&gt;前馈神经网路&lt;/h1&gt;&lt;h2 id=&quot;1、简单介绍&quot;&gt;&lt;a href=&quot;#1、简单介绍&quot; class=&quot;headerlink&quot; titl</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h1 id="前馈神经网路"><a href="#前馈神经网路" class="headerlink" title="前馈神经网路"></a>前馈神经网路</h1><h2 id="1、简单介绍"><a href="#1、简单介绍" class="headerlink" title="1、简单介绍"></a>1、简单介绍</h2><p><strong>前馈神经网络（Feedforward Neural Network，简称FNN）</strong>是一种基本的神经网络模型，它最早由美国心理学家Rosenblatt在1958年提出，是最早的一种神经网络模型。FNN的每个神经元都是单向连接的，信号只能从输入层流向输出层，不存在反馈（recurrent）的过程，因此也被称为“无记忆神经网络”。</p><p>FNN由输入层、隐藏层和输出层构成，其中输入层接收外部输入，输出层输出结果，而隐藏层则负责处理输入层的信息，提取出特征并将其传递给输出层。隐藏层通常包含多个神经元，每个神经元都连接着上一层的所有神经元和下一层的所有神经元。FNN的输出是根据输入与每个神经元之间的连接权值进行计算得出的。</p><p>FNN的训练过程通常是基于反向传播算法（Back Propagation，简称BP算法），该算法利用梯度下降法对网络参数进行调整，使得网络的输出结果能够逐渐逼近期望的输出结果。BP算法的基本思想是将误差逐层反向传播，并根据误差值对网络参数进行调整，以达到误差最小化的目的。在实际应用中，常常需要对神经网络进行大量的训练，以提高网络的泛化能力。</p><p>FNN在模式识别、数据挖掘、自然语言处理等领域中有广泛的应用，它能够有效地处理多维度、非线性和复杂的数据，具有良好的分类和预测性能。同时，FNN也具有一定的适应性，能够适应不同的数据类型和数据规模，并且具有良好的可扩展性，可以通过增加神经元和层数来提高网络的性能。</p><h2 id="2、"><a href="#2、" class="headerlink" title="2、"></a>2、</h2><p>目标：近似一些未知的理想函数</p><p><img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325160313002.png" alt="image-20230325160313002"></p><p>理想分类器：<img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325160616559.png" alt="image-20230325160616559"></p><p>前馈网络：定义映射：<img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325160644995.png" alt="image-20230325160644995"></p><p>从可用的样本中学习参数<img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325160727626.png" alt="image-20230325160727626"></p><p>获得f*地较好的近似</p><p>信息流从输入开始贵，经过中间计算（即函数映射），生成类别</p><p>没有反馈连接（循环网络）</p><h2 id="3、"><a href="#3、" class="headerlink" title="3、"></a>3、</h2><p>函数f是许多不同函数的组合，例如：<img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325161151241.png" alt="image-20230325161151241"></p><p><img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325161207536.png" alt="image-20230325161207536"></p><ul><li><p><input checked="" disabled="" type="checkbox"> 函数结构可以用有向无环图来描述（因此称为前馈网络）；</p></li><li><p><input checked="" disabled="" type="checkbox"> f（1）是第一层f（2）是第二层，以此类推；</p></li><li><p><input checked="" disabled="" type="checkbox"> 深度是函数组合链中最大的i</p></li><li><p><input checked="" disabled="" type="checkbox"> 最后一层称为输出层</p></li></ul><p><img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325202045174.png" alt="image-20230325202045174"></p><h2 id="4、线性模型"><a href="#4、线性模型" class="headerlink" title="4、线性模型"></a>4、线性模型</h2><p><img src="http://rx6zk4j2b.hn-bkt.clouddn.com/%E5%8D%9A%E5%AE%A2/image-20230325202418699.png" alt="image-20230325202418699"></p><h2 id="5、设计决策"><a href="#5、设计决策" class="headerlink" title="5、设计决策"></a>5、设计决策</h2><p>1、需要选择优化器、损失函数和输出形式</p><p>2、选择激活函数</p><p>3、机构设计（网络层数等）</p>]]></content:encoded>
-      
-      
-      <category domain="https://jhcgnb.cn/categories/%E5%AD%A6%E6%9C%AF/">学术</category>
-      
-      
-      <category domain="https://jhcgnb.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/">深度学习</category>
-      
-      
-      <comments>https://jhcgnb.cn/posts/169d769d/#disqus_thread</comments>
       
     </item>
     
