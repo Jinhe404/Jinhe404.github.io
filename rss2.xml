@@ -9,7 +9,7 @@
     <atom:link href="https://jhcgnb.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Sat, 22 Jul 2023 13:53:46 GMT</pubDate>
+    <pubDate>Mon, 14 Aug 2023 12:42:54 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -58,6 +58,10 @@
       <content:encoded><![CDATA[<p>在 Vue 3 中，<code>v-if</code> 和 <code>v-show</code> 都是用于控制元素显示和隐藏的指令，但它们之间有一些重要的区别。</p><ol><li><p><strong>编译时条件：</strong></p><ul><li><code>v-if</code>：当条件为 <code>false</code> 时，元素及其内容不会被渲染到DOM中。只有在条件为 <code>true</code> 时，元素才会被编译并添加到DOM。</li><li><code>v-show</code>：无论条件是 <code>true</code> 还是 <code>false</code>，元素都会被编译到DOM中，但是在条件为 <code>false</code> 时，元素会被设置为 <code>display: none</code>，从而隐藏它。</li></ul></li><li><p><strong>性能：</strong></p><ul><li><code>v-if</code>：当条件频繁切换时，会有一定的性能开销，因为每次切换条件时都会重新创建和销毁元素及其组件。</li><li><code>v-show</code>：适用于频繁切换的情况，因为元素一直在DOM中，只是样式属性变化，没有重新创建和销毁的开销。</li></ul></li><li><p><strong>初始化渲染时间：</strong></p><ul><li><code>v-if</code>：如果初始条件为 <code>false</code>，则在初始渲染时不会渲染元素。</li><li><code>v-show</code>：无论初始条件是 <code>true</code> 还是 <code>false</code>，元素都会被渲染，只是在 <code>false</code> 时不会显示。</li></ul></li><li><p><strong>DOM 结构：</strong></p><ul><li><code>v-if</code>：条件为 <code>false</code> 时，元素及其内容不会在DOM中存在，DOM结构会根据条件的变化而改变。</li><li><code>v-show</code>：无论条件如何，元素始终存在于DOM中，只是样式属性变化。</li></ul></li><li><p><strong>适用场景：</strong></p><ul><li><code>v-if</code>：适用于条件很少改变的情况，或者在初始渲染时元素可能是隐藏的情况。</li><li><code>v-show</code>：适用于需要频繁切换显示和隐藏状态的情况，例如制作可展开折叠的内容块。</li></ul></li></ol><p>综上所述，选择 <code>v-if</code> 还是 <code>v-show</code> 取决于您的具体需求和项目的性能要求。如果条件很少改变，或者初始渲染时元素可能是隐藏的，可以考虑使用 <code>v-if</code>。如果需要频繁切换显示和隐藏状态，并且性能开销比较重要，可以考虑使用 <code>v-show</code>。</p>]]></content:encoded>
       
       
+      <category domain="https://jhcgnb.cn/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
+      
+      <category domain="https://jhcgnb.cn/tags/%E5%89%8D%E7%AB%AF/">前端</category>
       
       
       <comments>https://jhcgnb.cn/posts/b94f3717/#disqus_thread</comments>
@@ -142,6 +146,32 @@
       
       
       <comments>https://jhcgnb.cn/posts/a98e3ede/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>JS是如何实现继承的</title>
+      <link>https://jhcgnb.cn/posts/undefined/</link>
+      <guid>https://jhcgnb.cn/posts/undefined/</guid>
+      <pubDate>Wed, 14 Jun 2023 12:37:56 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h3 id=&quot;JS是如何实现继承的&quot;&gt;&lt;a href=&quot;#JS是如何实现继承的&quot; class=&quot;headerlink&quot; title=&quot;JS是如何实现继承的&quot;&gt;&lt;/a&gt;JS是如何实现继承的&lt;/h3&gt;&lt;p&gt;在 JavaScript 中，继承是通过原型链来实现的。每个对象都有一个原型</description>
+        
+      
+      
+      
+      <content:encoded><![CDATA[<h3 id="JS是如何实现继承的"><a href="#JS是如何实现继承的" class="headerlink" title="JS是如何实现继承的"></a>JS是如何实现继承的</h3><p>在 JavaScript 中，继承是通过原型链来实现的。每个对象都有一个原型（prototype）属性，它指向另一个对象，这个对象即作为当前对象的原型。继承就是通过让一个对象继承另一个对象的属性和方法，使得子对象可以共享父对象的功能。</p><p>下面介绍几种常见的继承方式：</p><ol><li><strong>原型链继承</strong>：</li></ol><p>原型链继承是最基本的继承方式，它利用原型链将父对象的属性和方法传递给子对象。子对象的原型链上依次连接着父对象的原型，从而实现继承。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Parent&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">sayHello</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello from <span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Child&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> child = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line">child.<span class="title function_">sayHello</span>(); <span class="comment">// 输出: &quot;Hello from Child&quot;</span></span><br></pre></td></tr></table></figure><ol start="2"><li><strong>构造函数继承</strong>：</li></ol><p>构造函数继承通过在子对象的构造函数中调用父对象的构造函数来实现继承。这样可以实现父对象属性的继承，但无法继承父对象原型上的方法。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Parent&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Child&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> child = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child.<span class="property">name</span>); <span class="comment">// 输出: &quot;Child&quot;</span></span><br></pre></td></tr></table></figure><ol start="3"><li><strong>组合继承</strong>：</li></ol><p>组合继承是将原型链继承和构造函数继承结合起来的一种方式，它既继承了父对象的属性和方法，又通过调用父对象的构造函数来实现属性的初始化。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Parent&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">sayHello</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello from <span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>); <span class="comment">// 构造函数继承</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Child&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>(); <span class="comment">// 原型链继承</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> child = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line">child.<span class="title function_">sayHello</span>(); <span class="comment">// 输出: &quot;Hello from Child&quot;</span></span><br></pre></td></tr></table></figure><ol start="4"><li><strong>ES6 Class 继承</strong>：</li></ol><p>ES6 引入了类（class）的概念，使得继承更加清晰和语法更加友好。通过 <code>extends</code> 关键字，可以轻松地实现一个类继承另一个类的属性和方法。</p><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Parent</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Parent&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="title function_">sayHello</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">`Hello from <span class="subst">$&#123;<span class="variable language_">this</span>.name&#125;</span>`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Child</span> <span class="keyword">extends</span> <span class="title class_ inherited__">Parent</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">super</span>(); <span class="comment">// 调用父类的构造函数</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;Child&#x27;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> child = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line">child.<span class="title function_">sayHello</span>(); <span class="comment">// 输出: &quot;Hello from Child&quot;</span></span><br></pre></td></tr></table></figure><p>无论使用哪种继承方式，都应该注意可能存在的问题，例如原型链继承可能导致属性共享问题，构造函数继承可能无法继承原型上的方法等。选择合适的继承方式要根据具体的需求来决定。</p>]]></content:encoded>
+      
+      
+      <category domain="https://jhcgnb.cn/categories/%E6%8A%80%E6%9C%AF/">技术</category>
+      
+      
+      <category domain="https://jhcgnb.cn/tags/%E5%89%8D%E7%AB%AF/">前端</category>
+      
+      
+      <comments>https://jhcgnb.cn/posts/undefined/#disqus_thread</comments>
       
     </item>
     
@@ -247,32 +277,6 @@
       
       
       <comments>https://jhcgnb.cn/posts/e911cef5/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>八叉树结构</title>
-      <link>https://jhcgnb.cn/posts/f4dabd3f/</link>
-      <guid>https://jhcgnb.cn/posts/f4dabd3f/</guid>
-      <pubDate>Sat, 08 Apr 2023 13:12:55 GMT</pubDate>
-      
-        
-        
-      <description>&lt;h3 id=&quot;八叉树结构&quot;&gt;&lt;a href=&quot;#八叉树结构&quot; class=&quot;headerlink&quot; title=&quot;八叉树结构&quot;&gt;&lt;/a&gt;八叉树结构&lt;/h3&gt;&lt;p&gt;八叉树（Octree）是一种常用的树型数据结构，它是二叉树在三维空间中的扩展。八叉树被广泛应用于计算机图形学、空间分</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<h3 id="八叉树结构"><a href="#八叉树结构" class="headerlink" title="八叉树结构"></a>八叉树结构</h3><p>八叉树（Octree）是一种常用的树型数据结构，它是二叉树在三维空间中的扩展。八叉树被广泛应用于计算机图形学、空间分区和体积渲染等领域，用于高效地表示和处理三维空间的数据。</p><p>八叉树的基本思想是将三维空间递归地划分为八个等大小的子空间，每个子空间称为一个八叉树节点（Octant）。这种划分方式类似于将立方体分成八个等大小的小立方体。每个节点可以有三种可能的状态：</p><ol><li>叶节点（Leaf Node）：表示当前空间内存在数据或对象，不再继续划分。</li><li>空节点（Empty Node）：表示当前空间内不存在数据或对象，不再继续划分。</li><li>分支节点（Branch Node）：表示当前空间内可能存在数据或对象，需要进一步划分。</li></ol><p>八叉树的构建过程从一个包含所有数据的根节点开始，根据数据的分布情况，逐层划分空间直到满足停止条件。停止条件可以是树的深度达到预定的最大深度，或者节点内的数据数量达到某个阈值。</p><p>八叉树的用法主要有以下几个方面：</p><ol><li><p>空间分区：八叉树可以将三维空间划分为多个小空间，用于高效地管理和查询空间中的数据。在计算机图形学中，八叉树常被用来表示场景中的物体，以便进行快速的碰撞检测和可视化剔除。</p></li><li><p>数据压缩：八叉树可以用来压缩表示稀疏的三维数据。对于只在部分空间中存在数据的情况，八叉树可以有效地存储和表示这些数据，减少存储空间和访问成本。</p></li><li><p>体积渲染：在体积渲染（Volume Rendering）中，八叉树被广泛应用于表示和处理体数据。通过将体数据划分为八叉树节点，可以高效地实现体积数据的可视化和交互式浏览。</p></li><li><p>点云处理：对于三维点云数据，八叉树可以用于加速点云的搜索和查询操作。通过将点云数据划分为八叉树节点，可以快速地找到与给定查询点最近的点或区域。</p></li></ol><p>总的来说，八叉树是一种灵活且高效的数据结构，适用于处理和</p>]]></content:encoded>
-      
-      
-      <category domain="https://jhcgnb.cn/categories/%E5%AD%A6%E6%9C%AF/">学术</category>
-      
-      
-      <category domain="https://jhcgnb.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</category>
-      
-      
-      <comments>https://jhcgnb.cn/posts/f4dabd3f/#disqus_thread</comments>
       
     </item>
     
