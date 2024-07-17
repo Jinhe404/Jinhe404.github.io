@@ -1,0 +1,266 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>WebGIS面试题（第八期） | 纸飞机的旅行</title><meta name="author" content="GISer"><meta name="copyright" content="GISer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="说在前面的一些话（碎碎念+吐槽）： 目前这一段时间一直在忙自己的事情，以前以为自己精力旺盛，但是一上班，一开始朝九晚五，其实还不算是朝九晚五，早上八点半，晚上六点。发现每天回到家里以后是真的累，坐在沙发上休息会后洗漱收拾后一晃就九十点了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WebGIS面试题（第八期）">
+<meta property="og:url" content="https://jhcgnb.cn/posts/3cf6ea2d/index.html">
+<meta property="og:site_name" content="纸飞机的旅行">
+<meta property="og:description" content="说在前面的一些话（碎碎念+吐槽）： 目前这一段时间一直在忙自己的事情，以前以为自己精力旺盛，但是一上班，一开始朝九晚五，其实还不算是朝九晚五，早上八点半，晚上六点。发现每天回到家里以后是真的累，坐在沙发上休息会后洗漱收拾后一晃就九十点了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jhcgnb.cn/img/adaver.png">
+<meta property="article:published_time" content="2024-07-16T15:50:39.000Z">
+<meta property="article:modified_time" content="2024-07-17T13:30:36.019Z">
+<meta property="article:author" content="GISer">
+<meta property="article:tag" content="WebGIS面试题">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jhcgnb.cn/img/adaver.png"><link rel="shortcut icon" href="/img/adaver.png"><link rel="canonical" href="https://jhcgnb.cn/posts/3cf6ea2d/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="codeva-Iy1bfAu5vL"/><meta name="google-site-verification" content="wN-6FUBZ4DJeo_lSZyCGmnnTBKG3n0H20plO_qsfTPM"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c6e8056e906ef79846cd727f753be936";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=5757554821"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '5757554821');
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'WebGIS面试题（第八期）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-07-17 21:30:36'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/rss2.xml" title="纸飞机的旅行" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/adaver.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://telegraph-image-a7r.pages.dev/file/5fa2fb441c6bd9f291776.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="纸飞机的旅行"><span class="site-name">纸飞机的旅行</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">WebGIS面试题（第八期）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-16T15:50:39.000Z" title="发表于 2024-07-16 23:50:39">2024-07-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-07-17T13:30:36.019Z" title="更新于 2024-07-17 21:30:36">2024-07-17</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="WebGIS面试题（第八期）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>说在前面的一些话（碎碎念+吐槽）：</p>
+<p>目前这一段时间一直在忙自己的事情，以前以为自己精力旺盛，但是一上班，一开始朝九晚五，其实还不算是朝九晚五，早上八点半，晚上六点。发现每天回到家里以后是真的累，坐在沙发上休息会后洗漱收拾后一晃就九十点了。</p>
+<span id="more"></span>
+<p>​	哈哈 “钱难挣，屎难吃”，对我这个普通人太难了。如果目前还在学校的即将毕业的一定要考虑号自己想要的，及时早做准备，两手抓。</p>
+<p>因为这些题目都是之前面试通过记忆面试结束后记录、部分通过录音。目前我还在整理，当然有一部分也是我在做项目中出现的问题，今天就先整理一点（偷懒），因为有些答案还需要实地操作才能得出。当然依旧是答案仅供参考。同时能也在将自己之前做的项目在整理，逐步做一些大家有需求的内容。主要是一上班就太忙了，平时还要学习当前从事的行业的知识。</p>
+<h3 id="1、cesium里面polyline线段有几种表现"><a href="#1、cesium里面polyline线段有几种表现" class="headerlink" title="1、cesium里面polyline线段有几种表现?"></a>1、cesium里面polyline线段有几种表现?</h3><p>在Cesium中，Polyline（线段）可以有以下几种表现类型：</p>
+<ol>
+<li><p><strong>空间直线 (Space Line &#x2F; No Arc)</strong>: 这种类型的线段表现为两点之间的直接连线，无视地球曲率，适用于小范围或在平面上模拟直线效果。在Cesium中，可以通过设置 <code>Cesium.ArcType.NONE</code> 实现。</p>
+</li>
+<li><p><strong>球面线段 (Geodesic Line &#x2F; Great Circle Arc)</strong>: 考虑地球曲率，这种线段在球面上表现为大圆弧，是两点间地球上实际最短路径。使用 <code>Cesium.ArcType.GEODESIC</code> 可以得到这种表现形式。</p>
+</li>
+<li><p><strong>恒向线 (Rhumb Line &#x2F; Loxodrome)</strong>: 恒向线是一种在航行中保持固定方位角的航线，它在地图上表现为与纬线成一定角度的曲线。在Cesium中，通过指定 <code>Cesium.ArcType.RHUMB</code> 可以创建恒向线。</p>
+</li>
+</ol>
+<h3 id="2、Cesium中3DTiles模型如何旋转"><a href="#2、Cesium中3DTiles模型如何旋转" class="headerlink" title="2、Cesium中3DTiles模型如何旋转"></a>2、Cesium中3DTiles模型如何旋转</h3><p>在Cesium中，对3D Tiles模型进行旋转可以通过修改模型的<code>modelMatrix</code>属性来实现。</p>
+<p>首先加载一个3D Tiles模型，然后定义绕X轴旋转的角度，并将其转换为弧度。接着，使用<code>Cesium.Matrix3.fromRotationX</code>创建了一个表示X轴旋转的3x3矩阵，然后通过<code>Cesium.Matrix4.multiplyByMatrix3</code>将此旋转矩阵与模型的当前变换矩阵相乘，得到新的变换矩阵。最后，将这个包含旋转信息的新变换矩阵赋值给<code>tileset.modelMatrix</code>，从而实现了模型的旋转。</p>
+<p>具体代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 导入Cesium库</span><br><span class="line">const Cesium = require(&#x27;cesium&#x27;);</span><br><span class="line"></span><br><span class="line">// 假设你已经有了一个Cesium Viewer实例</span><br><span class="line">const viewer = new Cesium.Viewer(&#x27;cesiumContainer&#x27;);</span><br><span class="line"></span><br><span class="line">// 加载3D Tiles数据</span><br><span class="line">const tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset(&#123;</span><br><span class="line">    url: &#x27;./path/to/your/3d/tiles/tileset.json&#x27;</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">// 定义旋转参数，例如围绕X轴旋转的角度（单位：度）</span><br><span class="line">const RotateX = 45; // 旋转45度为例</span><br><span class="line"></span><br><span class="line">// 将角度转换为弧度</span><br><span class="line">const rotationInRadians = Cesium.Math.toRadians(RotateX);</span><br><span class="line"></span><br><span class="line">// 创建一个旋转矩阵，这里以X轴旋转为例</span><br><span class="line">const rotationMatrix = Cesium.Matrix3.fromRotationX(rotationInRadians);</span><br><span class="line"></span><br><span class="line">// 将旋转矩阵转换为4x4的模型变换矩阵</span><br><span class="line">// 假设tileset的初始modelMatrix为单位矩阵或者你有特定的初始变换</span><br><span class="line">let modelMatrix = Cesium.Matrix4.IDENTITY;</span><br><span class="line"></span><br><span class="line">// 应用旋转到现有的modelMatrix</span><br><span class="line">Cesium.Matrix4.multiplyByMatrix3(modelMatrix, rotationMatrix, modelMatrix);</span><br><span class="line"></span><br><span class="line">// 将更新后的modelMatrix应用到tileset上</span><br><span class="line">tileset.modelMatrix = modelMatrix;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading-pitch-roll-那么，这三个参数分别是什么呢"><a href="#3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading-pitch-roll-那么，这三个参数分别是什么呢" class="headerlink" title="3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading,pitch, roll,那么，这三个参数分别是什么呢?"></a>3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading,pitch, roll,那么，这三个参数分别是什么呢?</h3><p><strong>简单：</strong>这三个参数组合起来可以精确控制camera的方向和视角，常用于设置camera的初始位置、动画过渡（如flyTo操作）或动态调整观察视角。在Cesium的API中，如<code>setView</code>、<code>flyTo</code>、或<code>lookAt</code>方法中，通过<code>orientation</code>对象传递这些参数，通常需要将角度从度转换为弧度使用<code>Cesium.Math.toRadians</code>函数。</p>
+<p><strong>详细</strong>：</p>
+<p>在Cesium中，对camera进行操作时涉及的三个共同参数——heading、pitch、roll，它们是用来描述camera方向的旋转角度，与航空和航海中常用的欧拉角类似。具体来说：</p>
+<ol>
+<li><strong>Heading（偏航角 &#x2F; Yaw）</strong>: Heading代表camera绕垂直方向（通常是指向地心的方向，也就是上方向）旋转的角度，影响camera左右看向的能力。在Cesium中，正值表示向右转，负值表示向左转。</li>
+<li><strong>Pitch（俯仰角 &#x2F; Pitch）</strong>: Pitch代表camera绕横向（水平面的正面到背面）旋转的角度，决定了camera向上或向下看的程度。正值使camera抬头向上看，负值使camera低头向下看。当pitch达到90度时，camera朝向直接向下，达到-90度时则直接向上。</li>
+<li><strong>Roll（翻滚角 &#x2F; Roll）</strong>: Roll描述camera绕其前进方向的轴线旋转，影响camera自身的侧翻。在大多数应用场景中，camera的roll通常被设置为0，以保持camera平台的水平，但在特殊视觉效果或模拟飞行中可能会用到非零的roll值。</li>
+</ol>
+<h3 id="4、看你做过很多项目，你能描述制作cesium-热力图的逻辑步骤过程嘛，就是你如何做一个热力图。"><a href="#4、看你做过很多项目，你能描述制作cesium-热力图的逻辑步骤过程嘛，就是你如何做一个热力图。" class="headerlink" title="4、看你做过很多项目，你能描述制作cesium 热力图的逻辑步骤过程嘛，就是你如何做一个热力图。"></a>4、看你做过很多项目，你能描述制作cesium 热力图的逻辑步骤过程嘛，就是你如何做一个热力图。</h3><p><strong>简单回答</strong>：直接引入开源的Heatmap</p>
+<p><strong>详细</strong>：</p>
+<ul>
+<li><p><strong>使用heatmap.js</strong>：首先，利用<code>heatmap.js</code>生成热力图的canvas图像。你需要将地理位置数据和权重值传递给<code>heatmap.js</code>，生成对应的热力图可视化。</p>
+</li>
+<li><p><strong>转换为Cesium材质</strong>：将<code>heatmap.js</code>生成的canvas转换为Cesium的材质，然后应用于一个覆盖整个地图的Primitive或Entity上。</p>
+</li>
+<li><p>代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 假设你有数据 points = [&#123;lat: ..., lng: ..., value: ...&#125;, ...]</span><br><span class="line">let heatmapInstance = h337.create(&#123;</span><br><span class="line">    container: document.getElementById(&#x27;heatmapContainer&#x27;), // 这里需要替换为实际的容器</span><br><span class="line">    radius: 25,</span><br><span class="line">&#125;);</span><br><span class="line">heatmapInstance.setData(points);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="5、Cesium中如何实现不同精度DEM合并"><a href="#5、Cesium中如何实现不同精度DEM合并" class="headerlink" title="5、Cesium中如何实现不同精度DEM合并"></a>5、Cesium中如何实现不同精度DEM合并</h3><p><strong>简单：</strong>使用CesiumLab工具可以实现，它提供了图形界面来导入多个DEM文件，自动进行镶嵌、重采样和切片生成。</p>
+<p><strong>详细：</strong></p>
+<p>在Cesium中实现不同精度的DEM（数字高程模型）合并，通常涉及以下几个关键步骤，尤其是在离线状态下处理不同分辨率的DEM数据以保证模型能够正确贴地显示：</p>
+<ol>
+<li><strong>数据准备</strong>：<ul>
+<li>收集所有需要合并的DEM数据，确保它们覆盖相同的地理区域，但可能具有不同的分辨率（如30m、90m等）。</li>
+<li>将DEM数据转换为兼容的格式，如GeoTIFF，这是许多GIS工具和Cesium支持的标准格式。</li>
+</ul>
+</li>
+<li><strong>DEM镶嵌与重采样</strong>：<ul>
+<li>使用GIS工具（如ArcGIS, QGIS, GDAL等）进行镶嵌处理，将多个DEM数据集合并成一个连续的DEM。在这个过程中，可能需要对低分辨率DEM进行重采样以匹配最高分辨率DEM的网格系统和分辨率。</li>
+<li>通过栅格镶嵌（Mosaic）和栅格重采样（Resampling）操作，可以将不同分辨率的DEM统一到相同的空间参考系和分辨率下，确保数据的一致性。</li>
+</ul>
+</li>
+<li><strong>创建切片</strong>：<ul>
+<li>利用工具（CesiumLab等）或自定义脚本，将合并后的高分辨率DEM切割成Cesium所需的瓦片格式（如Terrain Tiles）。</li>
+</ul>
+</li>
+<li><strong>配置Cesium地形服务</strong>：<ul>
+<li>将生成的瓦片数据部署到Web服务器上，并在Cesium应用中配置自定义地形服务。这通常涉及到修改Cesium Viewer或Scene的<code>terrainProvider</code>属性，指向你的自定义地形服务URL。</li>
+</ul>
+</li>
+</ol>
+<h3 id="6、有没有做过cesium添加PBS发布的服务‘"><a href="#6、有没有做过cesium添加PBS发布的服务‘" class="headerlink" title="6、有没有做过cesium添加PBS发布的服务‘"></a>6、有没有做过cesium添加PBS发布的服务‘</h3><p><strong>本人回答</strong>：<strong>没有</strong></p>
+<p><strong>后期查询</strong>：具体操作看该文章：(<a target="_blank" rel="noopener" href="https://www.cnblogs.com/GIScore/p/6047736.html">https://www.cnblogs.com/GIScore/p/6047736.html</a>)</p>
+<p>​	确保你的PBS服务器正常运行，并且已经成功发布了所需的地图服务。这通常涉及到使用Terrabuilder或其他工具制作MPT（Mobile Package Tile）格式的数据包，并配置PBS以提供这些数据。确认PBS提供的服务接口类型，常见的有WMS、WMTS或自定义的Tile服务。你需要知道服务的URL、图层名称、坐标系等信息，以便在Cesium中正确引用。</p>
+<p>以上一些仅供参考。</p>
+<h2 id="此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】-欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。"><a href="#此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】-欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。" class="headerlink" title="此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】 欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。"></a><strong>此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】 欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。</strong></h2><p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://telegraph-image-a7r.pages.dev/file/d22f645eeb107b36a98d0.jpg" alt="qrcode_for_gh_e879ec750214_258"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jhcgnb.cn">GISer</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jhcgnb.cn/posts/3cf6ea2d/">https://jhcgnb.cn/posts/3cf6ea2d/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jhcgnb.cn" target="_blank">纸飞机的旅行</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/WebGIS%E9%9D%A2%E8%AF%95%E9%A2%98/">WebGIS面试题</a></div><div class="post_share"><div class="social-share" data-image="/img/adaver.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/fda46c66/" title="WebGIS面试题（第四期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">WebGIS面试题（第四期）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/140ab620/" title="WebGIS面试题（第一期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-14</div><div class="title">WebGIS面试题（第一期）</div></div></a></div><div><a href="/posts/c917cf39/" title="WebGIS面试题（第七期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-06-14</div><div class="title">WebGIS面试题（第七期）</div></div></a></div><div><a href="/posts/fda46c66/" title="WebGIS面试题（第四期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-14</div><div class="title">WebGIS面试题（第四期）</div></div></a></div><div><a href="/posts/5f26df17/" title="WebGIS面试题（第六期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-14</div><div class="title">WebGIS面试题（第六期）</div></div></a></div><div><a href="/posts/6d679077/" title="WebGIS面试题（第三期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-07-14</div><div class="title">WebGIS面试题（第三期）</div></div></a></div><div><a href="/posts/294b6a04/" title="WebGIS面试题（第五期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-09-14</div><div class="title">WebGIS面试题（第五期）</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODY2OC8zNTEzMA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/adaver.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">GISer</div><div class="author-info__description">选择有时候比努力更重要</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">30</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">8</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Jinhe404"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Jinhe404" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/jhcgnb@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://blog.csdn.net/weixin_44857463?type=blog" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=31025287432&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81cesium%E9%87%8C%E9%9D%A2polyline%E7%BA%BF%E6%AE%B5%E6%9C%89%E5%87%A0%E7%A7%8D%E8%A1%A8%E7%8E%B0"><span class="toc-number">1.</span> <span class="toc-text">1、cesium里面polyline线段有几种表现?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81Cesium%E4%B8%AD3DTiles%E6%A8%A1%E5%9E%8B%E5%A6%82%E4%BD%95%E6%97%8B%E8%BD%AC"><span class="toc-number">2.</span> <span class="toc-text">2、Cesium中3DTiles模型如何旋转</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81cesium%E6%8F%90%E4%BE%9B%E4%BA%86%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%8C%E5%8F%AF%E4%BB%A5%E5%AF%B9camera%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C%EF%BC%8C%E8%BF%99%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F%EF%BC%8C%E6%9C%89%E4%B8%89%E4%B8%AA%E5%85%B1%E5%90%8C%E7%9A%84%E5%8F%82%E6%95%B0%EF%BC%8Cheading-pitch-roll-%E9%82%A3%E4%B9%88%EF%BC%8C%E8%BF%99%E4%B8%89%E4%B8%AA%E5%8F%82%E6%95%B0%E5%88%86%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88%E5%91%A2"><span class="toc-number">3.</span> <span class="toc-text">3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading,pitch, roll,那么，这三个参数分别是什么呢?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E7%9C%8B%E4%BD%A0%E5%81%9A%E8%BF%87%E5%BE%88%E5%A4%9A%E9%A1%B9%E7%9B%AE%EF%BC%8C%E4%BD%A0%E8%83%BD%E6%8F%8F%E8%BF%B0%E5%88%B6%E4%BD%9Ccesium-%E7%83%AD%E5%8A%9B%E5%9B%BE%E7%9A%84%E9%80%BB%E8%BE%91%E6%AD%A5%E9%AA%A4%E8%BF%87%E7%A8%8B%E5%98%9B%EF%BC%8C%E5%B0%B1%E6%98%AF%E4%BD%A0%E5%A6%82%E4%BD%95%E5%81%9A%E4%B8%80%E4%B8%AA%E7%83%AD%E5%8A%9B%E5%9B%BE%E3%80%82"><span class="toc-number">4.</span> <span class="toc-text">4、看你做过很多项目，你能描述制作cesium 热力图的逻辑步骤过程嘛，就是你如何做一个热力图。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81Cesium%E4%B8%AD%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%90%8C%E7%B2%BE%E5%BA%A6DEM%E5%90%88%E5%B9%B6"><span class="toc-number">5.</span> <span class="toc-text">5、Cesium中如何实现不同精度DEM合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E6%9C%89%E6%B2%A1%E6%9C%89%E5%81%9A%E8%BF%87cesium%E6%B7%BB%E5%8A%A0PBS%E5%8F%91%E5%B8%83%E7%9A%84%E6%9C%8D%E5%8A%A1%E2%80%98"><span class="toc-number">6.</span> <span class="toc-text">6、有没有做过cesium添加PBS发布的服务‘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%A4%E5%A4%84%E5%8F%AA%E5%B1%95%E7%A4%BA%E4%BA%86%E9%83%A8%E5%88%86%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%8C%E5%89%A9%E4%BD%99%E9%9D%A2%E8%AF%95%E9%A2%98%E8%AF%B7%E7%A7%BB%E6%AD%A5%E5%85%AC%E4%BC%97%E5%8F%B7%E3%80%90GISer%E4%B8%96%E7%95%8C%E3%80%91-%E6%AC%A2%E8%BF%8E%E6%82%A8%E5%85%B3%E6%B3%A8%E6%88%91%E7%9A%84%E5%8E%9F%E5%88%9B%E5%85%AC%E4%BC%97%E5%8F%B7%E3%80%90GISer%E4%B8%96%E7%95%8C%E3%80%91%EF%BC%8C%E4%B8%8D%E5%AE%9A%E6%9C%9F%E5%88%86%E4%BA%AB%E8%B5%84%E6%BA%90%E4%BB%A5%E5%8F%8AGIS%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%8C%E6%9C%AC%E6%9C%9F%E5%88%86%E4%BA%AB%E5%88%B0%E8%BF%99%E9%87%8C%E5%B0%B1%E7%BB%93%E6%9D%9F%E4%BA%86%E3%80%82"><span class="toc-number"></span> <span class="toc-text">此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】 欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/3cf6ea2d/" title="WebGIS面试题（第八期）">WebGIS面试题（第八期）</a><time datetime="2024-07-16T15:50:39.000Z" title="发表于 2024-07-16 23:50:39">2024-07-16</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/fda46c66/" title="WebGIS面试题（第四期）">WebGIS面试题（第四期）</a><time datetime="2024-07-14T03:18:33.000Z" title="发表于 2024-07-14 11:18:33">2024-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/6d679077/" title="WebGIS面试题（第三期）">WebGIS面试题（第三期）</a><time datetime="2024-07-14T03:18:21.000Z" title="发表于 2024-07-14 11:18:21">2024-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/140ab620/" title="WebGIS面试题（第二期）">WebGIS面试题（第二期）</a><time datetime="2024-07-14T02:48:42.000Z" title="发表于 2024-07-14 10:48:42">2024-07-14</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/c917cf39/" title="WebGIS面试题（第七期）">WebGIS面试题（第七期）</a><time datetime="2024-06-14T03:22:42.000Z" title="发表于 2024-06-14 11:22:42">2024-06-14</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By GISer</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>

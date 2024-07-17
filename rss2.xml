@@ -9,8 +9,32 @@
     <atom:link href="https://jhcgnb.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Sun, 14 Jul 2024 03:25:27 GMT</pubDate>
+    <pubDate>Wed, 17 Jul 2024 13:30:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>WebGIS面试题（第八期）</title>
+      <link>https://jhcgnb.cn/posts/3cf6ea2d/</link>
+      <guid>https://jhcgnb.cn/posts/3cf6ea2d/</guid>
+      <pubDate>Tue, 16 Jul 2024 15:50:39 GMT</pubDate>
+      
+      <description>&lt;p&gt;说在前面的一些话（碎碎念+吐槽）：&lt;/p&gt;
+&lt;p&gt;目前这一段时间一直在忙自己的事情，以前以为自己精力旺盛，但是一上班，一开始朝九晚五，其实还不算是朝九晚五，早上八点半，晚上六点。发现每天回到家里以后是真的累，坐在沙发上休息会后洗漱收拾后一晃就九十点了。&lt;/p&gt;</description>
+      
+      
+      
+      <content:encoded><![CDATA[<p>说在前面的一些话（碎碎念+吐槽）：</p><p>目前这一段时间一直在忙自己的事情，以前以为自己精力旺盛，但是一上班，一开始朝九晚五，其实还不算是朝九晚五，早上八点半，晚上六点。发现每天回到家里以后是真的累，坐在沙发上休息会后洗漱收拾后一晃就九十点了。</p><span id="more"></span><p>​哈哈 “钱难挣，屎难吃”，对我这个普通人太难了。如果目前还在学校的即将毕业的一定要考虑号自己想要的，及时早做准备，两手抓。</p><p>因为这些题目都是之前面试通过记忆面试结束后记录、部分通过录音。目前我还在整理，当然有一部分也是我在做项目中出现的问题，今天就先整理一点（偷懒），因为有些答案还需要实地操作才能得出。当然依旧是答案仅供参考。同时能也在将自己之前做的项目在整理，逐步做一些大家有需求的内容。主要是一上班就太忙了，平时还要学习当前从事的行业的知识。</p><h3 id="1、cesium里面polyline线段有几种表现"><a href="#1、cesium里面polyline线段有几种表现" class="headerlink" title="1、cesium里面polyline线段有几种表现?"></a>1、cesium里面polyline线段有几种表现?</h3><p>在Cesium中，Polyline（线段）可以有以下几种表现类型：</p><ol><li><p><strong>空间直线 (Space Line &#x2F; No Arc)</strong>: 这种类型的线段表现为两点之间的直接连线，无视地球曲率，适用于小范围或在平面上模拟直线效果。在Cesium中，可以通过设置 <code>Cesium.ArcType.NONE</code> 实现。</p></li><li><p><strong>球面线段 (Geodesic Line &#x2F; Great Circle Arc)</strong>: 考虑地球曲率，这种线段在球面上表现为大圆弧，是两点间地球上实际最短路径。使用 <code>Cesium.ArcType.GEODESIC</code> 可以得到这种表现形式。</p></li><li><p><strong>恒向线 (Rhumb Line &#x2F; Loxodrome)</strong>: 恒向线是一种在航行中保持固定方位角的航线，它在地图上表现为与纬线成一定角度的曲线。在Cesium中，通过指定 <code>Cesium.ArcType.RHUMB</code> 可以创建恒向线。</p></li></ol><h3 id="2、Cesium中3DTiles模型如何旋转"><a href="#2、Cesium中3DTiles模型如何旋转" class="headerlink" title="2、Cesium中3DTiles模型如何旋转"></a>2、Cesium中3DTiles模型如何旋转</h3><p>在Cesium中，对3D Tiles模型进行旋转可以通过修改模型的<code>modelMatrix</code>属性来实现。</p><p>首先加载一个3D Tiles模型，然后定义绕X轴旋转的角度，并将其转换为弧度。接着，使用<code>Cesium.Matrix3.fromRotationX</code>创建了一个表示X轴旋转的3x3矩阵，然后通过<code>Cesium.Matrix4.multiplyByMatrix3</code>将此旋转矩阵与模型的当前变换矩阵相乘，得到新的变换矩阵。最后，将这个包含旋转信息的新变换矩阵赋值给<code>tileset.modelMatrix</code>，从而实现了模型的旋转。</p><p>具体代码如下：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 导入Cesium库</span><br><span class="line">const Cesium = require(&#x27;cesium&#x27;);</span><br><span class="line"></span><br><span class="line">// 假设你已经有了一个Cesium Viewer实例</span><br><span class="line">const viewer = new Cesium.Viewer(&#x27;cesiumContainer&#x27;);</span><br><span class="line"></span><br><span class="line">// 加载3D Tiles数据</span><br><span class="line">const tileset = viewer.scene.primitives.add(new Cesium.Cesium3DTileset(&#123;</span><br><span class="line">    url: &#x27;./path/to/your/3d/tiles/tileset.json&#x27;</span><br><span class="line">&#125;));</span><br><span class="line"></span><br><span class="line">// 定义旋转参数，例如围绕X轴旋转的角度（单位：度）</span><br><span class="line">const RotateX = 45; // 旋转45度为例</span><br><span class="line"></span><br><span class="line">// 将角度转换为弧度</span><br><span class="line">const rotationInRadians = Cesium.Math.toRadians(RotateX);</span><br><span class="line"></span><br><span class="line">// 创建一个旋转矩阵，这里以X轴旋转为例</span><br><span class="line">const rotationMatrix = Cesium.Matrix3.fromRotationX(rotationInRadians);</span><br><span class="line"></span><br><span class="line">// 将旋转矩阵转换为4x4的模型变换矩阵</span><br><span class="line">// 假设tileset的初始modelMatrix为单位矩阵或者你有特定的初始变换</span><br><span class="line">let modelMatrix = Cesium.Matrix4.IDENTITY;</span><br><span class="line"></span><br><span class="line">// 应用旋转到现有的modelMatrix</span><br><span class="line">Cesium.Matrix4.multiplyByMatrix3(modelMatrix, rotationMatrix, modelMatrix);</span><br><span class="line"></span><br><span class="line">// 将更新后的modelMatrix应用到tileset上</span><br><span class="line">tileset.modelMatrix = modelMatrix;</span><br></pre></td></tr></table></figure><h3 id="3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading-pitch-roll-那么，这三个参数分别是什么呢"><a href="#3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading-pitch-roll-那么，这三个参数分别是什么呢" class="headerlink" title="3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading,pitch, roll,那么，这三个参数分别是什么呢?"></a>3、cesium提供了三种方式，可以对camera进行操作，这三种方式，有三个共同的参数，heading,pitch, roll,那么，这三个参数分别是什么呢?</h3><p><strong>简单：</strong>这三个参数组合起来可以精确控制camera的方向和视角，常用于设置camera的初始位置、动画过渡（如flyTo操作）或动态调整观察视角。在Cesium的API中，如<code>setView</code>、<code>flyTo</code>、或<code>lookAt</code>方法中，通过<code>orientation</code>对象传递这些参数，通常需要将角度从度转换为弧度使用<code>Cesium.Math.toRadians</code>函数。</p><p><strong>详细</strong>：</p><p>在Cesium中，对camera进行操作时涉及的三个共同参数——heading、pitch、roll，它们是用来描述camera方向的旋转角度，与航空和航海中常用的欧拉角类似。具体来说：</p><ol><li><strong>Heading（偏航角 &#x2F; Yaw）</strong>: Heading代表camera绕垂直方向（通常是指向地心的方向，也就是上方向）旋转的角度，影响camera左右看向的能力。在Cesium中，正值表示向右转，负值表示向左转。</li><li><strong>Pitch（俯仰角 &#x2F; Pitch）</strong>: Pitch代表camera绕横向（水平面的正面到背面）旋转的角度，决定了camera向上或向下看的程度。正值使camera抬头向上看，负值使camera低头向下看。当pitch达到90度时，camera朝向直接向下，达到-90度时则直接向上。</li><li><strong>Roll（翻滚角 &#x2F; Roll）</strong>: Roll描述camera绕其前进方向的轴线旋转，影响camera自身的侧翻。在大多数应用场景中，camera的roll通常被设置为0，以保持camera平台的水平，但在特殊视觉效果或模拟飞行中可能会用到非零的roll值。</li></ol><h3 id="4、看你做过很多项目，你能描述制作cesium-热力图的逻辑步骤过程嘛，就是你如何做一个热力图。"><a href="#4、看你做过很多项目，你能描述制作cesium-热力图的逻辑步骤过程嘛，就是你如何做一个热力图。" class="headerlink" title="4、看你做过很多项目，你能描述制作cesium 热力图的逻辑步骤过程嘛，就是你如何做一个热力图。"></a>4、看你做过很多项目，你能描述制作cesium 热力图的逻辑步骤过程嘛，就是你如何做一个热力图。</h3><p><strong>简单回答</strong>：直接引入开源的Heatmap</p><p><strong>详细</strong>：</p><ul><li><p><strong>使用heatmap.js</strong>：首先，利用<code>heatmap.js</code>生成热力图的canvas图像。你需要将地理位置数据和权重值传递给<code>heatmap.js</code>，生成对应的热力图可视化。</p></li><li><p><strong>转换为Cesium材质</strong>：将<code>heatmap.js</code>生成的canvas转换为Cesium的材质，然后应用于一个覆盖整个地图的Primitive或Entity上。</p></li><li><p>代码：</p><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// 假设你有数据 points = [&#123;lat: ..., lng: ..., value: ...&#125;, ...]</span><br><span class="line">let heatmapInstance = h337.create(&#123;</span><br><span class="line">    container: document.getElementById(&#x27;heatmapContainer&#x27;), // 这里需要替换为实际的容器</span><br><span class="line">    radius: 25,</span><br><span class="line">&#125;);</span><br><span class="line">heatmapInstance.setData(points);</span><br></pre></td></tr></table></figure></li></ul><h3 id="5、Cesium中如何实现不同精度DEM合并"><a href="#5、Cesium中如何实现不同精度DEM合并" class="headerlink" title="5、Cesium中如何实现不同精度DEM合并"></a>5、Cesium中如何实现不同精度DEM合并</h3><p><strong>简单：</strong>使用CesiumLab工具可以实现，它提供了图形界面来导入多个DEM文件，自动进行镶嵌、重采样和切片生成。</p><p><strong>详细：</strong></p><p>在Cesium中实现不同精度的DEM（数字高程模型）合并，通常涉及以下几个关键步骤，尤其是在离线状态下处理不同分辨率的DEM数据以保证模型能够正确贴地显示：</p><ol><li><strong>数据准备</strong>：<ul><li>收集所有需要合并的DEM数据，确保它们覆盖相同的地理区域，但可能具有不同的分辨率（如30m、90m等）。</li><li>将DEM数据转换为兼容的格式，如GeoTIFF，这是许多GIS工具和Cesium支持的标准格式。</li></ul></li><li><strong>DEM镶嵌与重采样</strong>：<ul><li>使用GIS工具（如ArcGIS, QGIS, GDAL等）进行镶嵌处理，将多个DEM数据集合并成一个连续的DEM。在这个过程中，可能需要对低分辨率DEM进行重采样以匹配最高分辨率DEM的网格系统和分辨率。</li><li>通过栅格镶嵌（Mosaic）和栅格重采样（Resampling）操作，可以将不同分辨率的DEM统一到相同的空间参考系和分辨率下，确保数据的一致性。</li></ul></li><li><strong>创建切片</strong>：<ul><li>利用工具（CesiumLab等）或自定义脚本，将合并后的高分辨率DEM切割成Cesium所需的瓦片格式（如Terrain Tiles）。</li></ul></li><li><strong>配置Cesium地形服务</strong>：<ul><li>将生成的瓦片数据部署到Web服务器上，并在Cesium应用中配置自定义地形服务。这通常涉及到修改Cesium Viewer或Scene的<code>terrainProvider</code>属性，指向你的自定义地形服务URL。</li></ul></li></ol><h3 id="6、有没有做过cesium添加PBS发布的服务‘"><a href="#6、有没有做过cesium添加PBS发布的服务‘" class="headerlink" title="6、有没有做过cesium添加PBS发布的服务‘"></a>6、有没有做过cesium添加PBS发布的服务‘</h3><p><strong>本人回答</strong>：<strong>没有</strong></p><p><strong>后期查询</strong>：具体操作看该文章：(<a href="https://www.cnblogs.com/GIScore/p/6047736.html">https://www.cnblogs.com/GIScore/p/6047736.html</a>)</p><p>​确保你的PBS服务器正常运行，并且已经成功发布了所需的地图服务。这通常涉及到使用Terrabuilder或其他工具制作MPT（Mobile Package Tile）格式的数据包，并配置PBS以提供这些数据。确认PBS提供的服务接口类型，常见的有WMS、WMTS或自定义的Tile服务。你需要知道服务的URL、图层名称、坐标系等信息，以便在Cesium中正确引用。</p><p>以上一些仅供参考。</p><h2 id="此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】-欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。"><a href="#此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】-欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。" class="headerlink" title="此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】 欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。"></a><strong>此处只展示了部分面试题，剩余面试题请移步公众号【GISer世界】 欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。</strong></h2><p><img src="https://telegraph-image-a7r.pages.dev/file/d22f645eeb107b36a98d0.jpg" alt="qrcode_for_gh_e879ec750214_258"></p>]]></content:encoded>
+      
+      
+      <category domain="https://jhcgnb.cn/categories/%E9%9D%A2%E8%AF%95%E9%A2%98/">面试题</category>
+      
+      
+      <category domain="https://jhcgnb.cn/tags/WebGIS%E9%9D%A2%E8%AF%95%E9%A2%98/">WebGIS面试题</category>
+      
+      
+      <comments>https://jhcgnb.cn/posts/3cf6ea2d/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>WebGIS面试题（第四期）</title>
@@ -248,34 +272,6 @@
       
       
       <comments>https://jhcgnb.cn/posts/140ab620/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>流形与非流行</title>
-      <link>https://jhcgnb.cn/posts/467cee4/</link>
-      <guid>https://jhcgnb.cn/posts/467cee4/</guid>
-      <pubDate>Sat, 08 Jul 2023 13:45:31 GMT</pubDate>
-      
-        
-        
-      <description>&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;/&gt;
-
-&lt;h3 id=&quot;流形三角形网格（Manifold-Triangle-Mesh）和非流形网格（Non-Manifold-Mesh）&quot;&gt;&lt;a href=&quot;#流形三角形网格（Manifold-</description>
-        
-      
-      
-      
-      <content:encoded><![CDATA[<meta name="referrer" content="no-referrer"/><h3 id="流形三角形网格（Manifold-Triangle-Mesh）和非流形网格（Non-Manifold-Mesh）"><a href="#流形三角形网格（Manifold-Triangle-Mesh）和非流形网格（Non-Manifold-Mesh）" class="headerlink" title="流形三角形网格（Manifold Triangle Mesh）和非流形网格（Non-Manifold Mesh）"></a>流形三角形网格（Manifold Triangle Mesh）和非流形网格（Non-Manifold Mesh）</h3><p>流形三角形网格（Manifold Triangle Mesh）和非流形网格（Non-Manifold Mesh）是在计算机图形学和几何处理中常见的两种网格类型。它们具有不同的特征和限制，对于不同的应用领域和算法，选择合适的网格类型是非常重要的。</p><ol><li><p>流形三角形网格：<br>流形三角形网格是一种拓扑上具有连续性和封闭性的网格。它的特征包括：</p><ul><li>每个顶点最多与两个边和两个面相连。</li><li>每个边最多与两个面相连。</li><li>每个面最多与三条边和三个顶点相连。</li><li>网格中不存在孤立的顶点、边或面。</li></ul><p>流形三角形网格常用于表示光滑曲面和可变形物体，它具有良好的几何性质和拓扑特征，适用于各种几何处理算法，如渲染、形状分析和物理模拟等。</p></li><li><p>非流形网格：<br>非流形网格是一种拓扑上不具备连续性和封闭性的网格。它的特征包括：</p><ul><li>顶点、边或面可以具有任意数量的相邻元素。</li><li>存在孤立的顶点、边或面。</li><li>边和面之间的连接关系可以是多对多的。</li></ul><p>非流形网格常用于表示复杂的几何结构，如曲面上的孔洞、尖锐的边缘或非连续的形状。然而，由于其拓扑特性的复杂性，非流形网格在某些算法和应用中可能会导致问题，例如光滑、纹理映射和体积建模等。</p></li></ol><p>对于流形三角形网格和非流形网格，需要根据具体的应用场景和算法需求选择合适的网格类型。流形三角形网格适用于大多数常规几何处理任务，而非流形网格则更适用于具有复杂拓扑结构的特殊情况。在处理非流形网格时，需要特别注意处理拓扑上的不连续性和边界条件。</p>]]></content:encoded>
-      
-      
-      <category domain="https://jhcgnb.cn/categories/%E5%AD%A6%E6%9C%AF/">学术</category>
-      
-      
-      <category domain="https://jhcgnb.cn/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</category>
-      
-      
-      <comments>https://jhcgnb.cn/posts/467cee4/#disqus_thread</comments>
       
     </item>
     
