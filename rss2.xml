@@ -9,11 +9,11 @@
     <atom:link href="https://jhcgnb.cn/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>选择有时候比努力更重要</description>
-    <pubDate>Sat, 27 Jul 2024 02:55:04 GMT</pubDate>
+    <pubDate>Sat, 27 Jul 2024 02:59:55 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>WebGIS面试题（第一期）</title>
+      <title>（windows系统环境下）ollama + fastgpt搭建本地私有大模型</title>
       <link>https://jhcgnb.cn/posts/f8ffd5a4/</link>
       <guid>https://jhcgnb.cn/posts/f8ffd5a4/</guid>
       <pubDate>Sat, 27 Jul 2024 02:51:36 GMT</pubDate>
@@ -31,7 +31,7 @@
       <category domain="https://jhcgnb.cn/categories/%E6%9C%AC%E5%9C%B0%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2%E5%A4%A7%E6%A8%A1%E5%9E%8B/">本地安装部署大模型</category>
       
       
-      <category domain="https://jhcgnb.cn/tags/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B/">AI大模型</category>
+      <category domain="https://jhcgnb.cn/tags/%E5%AE%89%E8%91%AC%E6%95%99%E7%A8%8B/">安葬教程</category>
       
       
       <comments>https://jhcgnb.cn/posts/f8ffd5a4/#disqus_thread</comments>

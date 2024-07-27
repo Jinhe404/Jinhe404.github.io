@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://jhcgnb.cn/photos/index.html</loc>
+    
+    <lastmod>2024-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcgnb.cn/movies/index.html</loc>
+    
+    <lastmod>2024-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jhcgnb.cn/music/index.html</loc>
+    
+    <lastmod>2024-07-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://jhcgnb.cn/posts/f8ffd5a4/</loc>
     
     <lastmod>2024-07-27</lastmod>
@@ -23,33 +50,6 @@
     <loc>https://jhcgnb.cn/posts/3cf6ea2d/</loc>
     
     <lastmod>2024-07-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jhcgnb.cn/music/index.html</loc>
-    
-    <lastmod>2024-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jhcgnb.cn/movies/index.html</loc>
-    
-    <lastmod>2024-07-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jhcgnb.cn/photos/index.html</loc>
-    
-    <lastmod>2024-07-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -454,7 +454,7 @@
   </url>
   
   <url>
-    <loc>https://jhcgnb.cn/tags/AI%E5%A4%A7%E6%A8%A1%E5%9E%8B/</loc>
+    <loc>https://jhcgnb.cn/tags/%E5%AE%89%E8%91%AC%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2024-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
