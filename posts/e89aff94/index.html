@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>linux系统下环境部署 | 纸飞机的旅行</title><meta name="author" content="GISer"><meta name="copyright" content="GISer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、环境准备说明：如果已经安装过相关工具就忽略 1、安装JAVA 运行环境第一步：上传或下载安装包cd  &#x2F;usr&#x2F;local jdk-8u152-linux-x64.tar.gz 第二步：解压安装包tar -zxvf jdk-8u152-linux-x64.tar.gz 第三步：建立软连接ln -s &#x2F;usr&#x2F;local&#x2F;jdk1.8.0_152">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>linux系统下环境部署 | 纸飞机的旅行</title><meta name="author" content="GISer"><meta name="copyright" content="GISer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="一、环境准备说明：如果已经安装过相关工具就忽略 1、安装JAVA 运行环境第一步：上传或下载安装包cd  &#x2F;usr&#x2F;local jdk-8u152-linux-x64.tar.gz 第二步：解压安装包tar -zxvf jdk-8u152-linux-x64.tar.gz 第三步：建立软连接ln -s &#x2F;usr&#x2F;local&#x2F;jdk1.8.0_152&#x2F;  &#x2F;usr&#x2F;local&#x2F;jdk 第四步：修改环">
 <meta property="og:type" content="article">
 <meta property="og:title" content="linux系统下环境部署">
 <meta property="og:url" content="https://jhcgnb.cn/posts/e89aff94/index.html">
 <meta property="og:site_name" content="纸飞机的旅行">
-<meta property="og:description" content="一、环境准备说明：如果已经安装过相关工具就忽略 1、安装JAVA 运行环境第一步：上传或下载安装包cd  &#x2F;usr&#x2F;local jdk-8u152-linux-x64.tar.gz 第二步：解压安装包tar -zxvf jdk-8u152-linux-x64.tar.gz 第三步：建立软连接ln -s &#x2F;usr&#x2F;local&#x2F;jdk1.8.0_152">
+<meta property="og:description" content="一、环境准备说明：如果已经安装过相关工具就忽略 1、安装JAVA 运行环境第一步：上传或下载安装包cd  &#x2F;usr&#x2F;local jdk-8u152-linux-x64.tar.gz 第二步：解压安装包tar -zxvf jdk-8u152-linux-x64.tar.gz 第三步：建立软连接ln -s &#x2F;usr&#x2F;local&#x2F;jdk1.8.0_152&#x2F;  &#x2F;usr&#x2F;local&#x2F;jdk 第四步：修改环">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jhcgnb.cn/img/adaver.png">
 <meta property="article:published_time" content="2024-08-12T07:49:45.120Z">
-<meta property="article:modified_time" content="2024-08-12T08:02:39.856Z">
+<meta property="article:modified_time" content="2024-08-12T08:02:49.593Z">
 <meta property="article:author" content="GISer">
 <meta property="article:tag" content="安装教程">
 <meta name="twitter:card" content="summary">
@@ -69,7 +69,7 @@ gtag('config', '5757554821');
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-08-12 16:02:39'
+  postUpdate: '2024-08-12 16:02:49'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -174,113 +174,117 @@ gtag('config', '5757554821');
     }
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/rss2.xml" title="纸飞机的旅行" type="application/rss+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/adaver.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://telegraph-image-a7r.pages.dev/file/5fa2fb441c6bd9f291776.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="纸飞机的旅行"><span class="site-name">纸飞机的旅行</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">linux系统下环境部署</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-12T07:49:45.120Z" title="发表于 2024-08-12 15:49:45">2024-08-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-12T08:02:39.856Z" title="更新于 2024-08-12 16:02:39">2024-08-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">linux环境下部署开发环境</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">486</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="linux系统下环境部署"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><p>说明：如果已经安装过相关工具就忽略</p>
-<h2 id="1、安装JAVA-运行环境"><a href="#1、安装JAVA-运行环境" class="headerlink" title="1、安装JAVA 运行环境"></a>1、安装JAVA 运行环境</h2><h6 id="第一步：上传或下载安装包"><a href="#第一步：上传或下载安装包" class="headerlink" title="第一步：上传或下载安装包"></a>第一步：上传或下载安装包</h6><p>cd  &#x2F;usr&#x2F;local</p>
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/adaver.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">33</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://telegraph-image-a7r.pages.dev/file/5fa2fb441c6bd9f291776.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="纸飞机的旅行"><span class="site-name">纸飞机的旅行</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">linux系统下环境部署</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-08-12T07:49:45.120Z" title="发表于 2024-08-12 15:49:45">2024-08-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-12T08:02:49.593Z" title="更新于 2024-08-12 16:02:49">2024-08-12</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E9%83%A8%E7%BD%B2%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">linux环境下部署开发环境</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.4k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="linux系统下环境部署"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><p>说明：如果已经安装过相关工具就忽略</p>
+<h2 id="1、安装JAVA-运行环境"><a href="#1、安装JAVA-运行环境" class="headerlink" title="1、安装JAVA 运行环境"></a>1、安装JAVA 运行环境</h2><h6 id="第一步：上传或下载安装包"><a href="#第一步：上传或下载安装包" class="headerlink" title="第一步：上传或下载安装包"></a>第一步：上传或下载安装包</h6><p>cd  /usr/local</p>
 <p>jdk-8u152-linux-x64.tar.gz</p>
 <h6 id="第二步：解压安装包"><a href="#第二步：解压安装包" class="headerlink" title="第二步：解压安装包"></a>第二步：解压安装包</h6><p>tar -zxvf jdk-8u152-linux-x64.tar.gz</p>
-<h6 id="第三步：建立软连接"><a href="#第三步：建立软连接" class="headerlink" title="第三步：建立软连接"></a>第三步：建立软连接</h6><p>ln -s &#x2F;usr&#x2F;local&#x2F;jdk1.8.0_152&#x2F;  &#x2F;usr&#x2F;local&#x2F;jdk</p>
-<h6 id="第四步：修改环境变量"><a href="#第四步：修改环境变量" class="headerlink" title="第四步：修改环境变量"></a>第四步：修改环境变量</h6><p>vim &#x2F;etc&#x2F;profile</p>
-<p>export JAVA_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;jdk</p>
-<p>export JRE_HOME&#x3D;$JAVA_HOME&#x2F;jre</p>
-<p>export CLASSPATH&#x3D;.:$CLASSPATH:$JAVA_HOME&#x2F;lib:$JRE_HOME&#x2F;lib</p>
-<p>export PATH&#x3D;$PATH:$JAVA_HOME&#x2F;bin:$JRE_HOME&#x2F;bin</p>
-<p>通过命令source &#x2F;etc&#x2F;profile让profile文件立即生效</p>
-<p>source &#x2F;etc&#x2F;profile</p>
+<h6 id="第三步：建立软连接"><a href="#第三步：建立软连接" class="headerlink" title="第三步：建立软连接"></a>第三步：建立软连接</h6><p>ln -s /usr/local/jdk1.8.0_152/  /usr/local/jdk</p>
+<h6 id="第四步：修改环境变量"><a href="#第四步：修改环境变量" class="headerlink" title="第四步：修改环境变量"></a>第四步：修改环境变量</h6><p>vim /etc/profile</p>
+<p>export JAVA_HOME=/usr/local/jdk</p>
+<p>export JRE_HOME=$JAVA_HOME/jre</p>
+<p>export CLASSPATH=.:$CLASSPATH:$JAVA_HOME/lib:$JRE_HOME/lib</p>
+<p>export PATH=$PATH:$JAVA_HOME/bin:$JRE_HOME/bin</p>
+<p>通过命令source /etc/profile让profile文件立即生效</p>
+<p>source /etc/profile</p>
 <h6 id="第五步、测试是否安装成功"><a href="#第五步、测试是否安装成功" class="headerlink" title="第五步、测试是否安装成功"></a>第五步、测试是否安装成功</h6><p>使用java -version，出现版本为java version “1.8.0_152”</p>
-<h2 id="2、安装maven"><a href="#2、安装maven" class="headerlink" title="2、安装maven"></a>2、安装maven</h2><h6 id="第一步：上传或下载安装包-1"><a href="#第一步：上传或下载安装包-1" class="headerlink" title="第一步：上传或下载安装包"></a>第一步：上传或下载安装包</h6><p>cd  &#x2F;usr&#x2F;local</p>
+<h2 id="2、安装maven"><a href="#2、安装maven" class="headerlink" title="2、安装maven"></a>2、安装maven</h2><h6 id="第一步：上传或下载安装包-1"><a href="#第一步：上传或下载安装包-1" class="headerlink" title="第一步：上传或下载安装包"></a>第一步：上传或下载安装包</h6><p>cd  /usr/local</p>
 <p>apache-maven-3.6.1-bin.tar.gz</p>
 <h6 id="第二步：解压安装包-1"><a href="#第二步：解压安装包-1" class="headerlink" title="第二步：解压安装包"></a>第二步：解压安装包</h6><p>tar  -zxvf  apache-maven-3.6.1-bin.tar.gz</p>
-<h6 id="第三步：建立软连接-1"><a href="#第三步：建立软连接-1" class="headerlink" title="第三步：建立软连接"></a>第三步：建立软连接</h6><p>ln  -s  &#x2F;usr&#x2F;local&#x2F;apache-maven-3.6.1&#x2F;  &#x2F;usr&#x2F;local&#x2F;maven</p>
-<h6 id="第四步：修改环境变量-1"><a href="#第四步：修改环境变量-1" class="headerlink" title="第四步：修改环境变量"></a>第四步：修改环境变量</h6><p>vim &#x2F;etc&#x2F;profile</p>
-<p>export MAVEN_HOME&#x3D;&#x2F;usr&#x2F;local&#x2F;maven</p>
-<p>export PATH&#x3D;$PATH:$MAVEN_HOME&#x2F;bin</p>
-<p>通过命令source &#x2F;etc&#x2F;profile让profile文件立即生效</p>
-<p>source &#x2F;etc&#x2F;profile</p>
+<h6 id="第三步：建立软连接-1"><a href="#第三步：建立软连接-1" class="headerlink" title="第三步：建立软连接"></a>第三步：建立软连接</h6><p>ln  -s  /usr/local/apache-maven-3.6.1/  /usr/local/maven</p>
+<h6 id="第四步：修改环境变量-1"><a href="#第四步：修改环境变量-1" class="headerlink" title="第四步：修改环境变量"></a>第四步：修改环境变量</h6><p>vim /etc/profile</p>
+<p>export MAVEN_HOME=/usr/local/maven</p>
+<p>export PATH=$PATH:$MAVEN_HOME/bin</p>
+<p>通过命令source /etc/profile让profile文件立即生效</p>
+<p>source /etc/profile</p>
 <h6 id="第五步、测试是否安装成功-1"><a href="#第五步、测试是否安装成功-1" class="headerlink" title="第五步、测试是否安装成功"></a>第五步、测试是否安装成功</h6><p>mvn –v</p>
 <h2 id="3、安装docker"><a href="#3、安装docker" class="headerlink" title="3、安装docker"></a>3、安装docker</h2><h6 id="环境安装："><a href="#环境安装：" class="headerlink" title="环境安装："></a>环境安装：</h6><p>yum -y install gcc-c++</p>
 <h6 id="第一步：安装必要的一些系统工具"><a href="#第一步：安装必要的一些系统工具" class="headerlink" title="第一步：安装必要的一些系统工具"></a>第一步：安装必要的一些系统工具</h6><p>yum install -y yum-utils device-mapper-persistent-data lvm2</p>
-<h6 id="第二步：添加软件源信息"><a href="#第二步：添加软件源信息" class="headerlink" title="第二步：添加软件源信息"></a>第二步：添加软件源信息</h6><p>yum-config-manager –add-repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo">http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</a></p>
+<h6 id="第二步：添加软件源信息"><a href="#第二步：添加软件源信息" class="headerlink" title="第二步：添加软件源信息"></a>第二步：添加软件源信息</h6><p>yum-config-manager —add-repo <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo">http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</a></p>
 <h6 id="第三步：更新并安装Docker-CE"><a href="#第三步：更新并安装Docker-CE" class="headerlink" title="第三步：更新并安装Docker-CE"></a>第三步：更新并安装Docker-CE</h6><p>yum makecache fast</p>
 <p>yum -y install docker-ce</p>
 <h6 id="第四步：开启Docker服务"><a href="#第四步：开启Docker服务" class="headerlink" title="第四步：开启Docker服务"></a>第四步：开启Docker服务</h6><p>systemctl start docker</p>
 <p>systemctl enable docker</p>
 <h6 id="第五步：测试是否安装成功"><a href="#第五步：测试是否安装成功" class="headerlink" title="第五步：测试是否安装成功"></a>第五步：测试是否安装成功</h6><p>docker -v</p>
-<h6 id="第六步：配置镜像加速器"><a href="#第六步：配置镜像加速器" class="headerlink" title="第六步：配置镜像加速器"></a>第六步：配置镜像加速器</h6><p>您可以通过修改daemon配置文件&#x2F;etc&#x2F;docker&#x2F;daemon.json来使用加速器</p>
-<p>sudo mkdir -p &#x2F;etc&#x2F;docker</p>
-<p>sudo tee &#x2F;etc&#x2F;docker&#x2F;daemon.json &lt;&lt;-‘EOF’</p>
+<h6 id="第六步：配置镜像加速器"><a href="#第六步：配置镜像加速器" class="headerlink" title="第六步：配置镜像加速器"></a>第六步：配置镜像加速器</h6><p>您可以通过修改daemon配置文件/etc/docker/daemon.json来使用加速器</p>
+<p>sudo mkdir -p /etc/docker</p>
+<p>sudo tee /etc/docker/daemon.json &lt;&lt;-‘EOF’</p>
 <p>{</p>
-<p>“registry-mirrors”: [“<a target="_blank" rel="noopener" href="https://ldu6wrsf.mirror.aliyuncs.com"]">https://ldu6wrsf.mirror.aliyuncs.com&quot;]</a></p>
+<p>“registry-mirrors”: [“<a target="_blank" rel="noopener" href="https://ldu6wrsf.mirror.aliyuncs.com">https://ldu6wrsf.mirror.aliyuncs.com</a>“]</p>
 <p>}</p>
 <p>EOF</p>
 <p>sudo systemctl daemon-reload</p>
 <p>sudo systemctl restart docker</p>
 <h2 id="4、安装mysql"><a href="#4、安装mysql" class="headerlink" title="4、安装mysql"></a>4、安装mysql</h2><h6 id="第一步：拉取镜像"><a href="#第一步：拉取镜像" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull mysql:5.7</p>
-<h6 id="第二步：启动"><a href="#第二步：启动" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run –name mysql –restart&#x3D;always -v &#x2F;home&#x2F;ljaer&#x2F;mysql:&#x2F;var&#x2F;lib&#x2F;mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD&#x3D;root -d mysql:5.7</p>
+<h6 id="第二步：启动"><a href="#第二步：启动" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run —name mysql —restart=always -v /home/ljaer/mysql:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:5.7</p>
 <h6 id="第三步：测试mysql"><a href="#第三步：测试mysql" class="headerlink" title="第三步：测试mysql"></a>第三步：测试mysql</h6><p>进入容器：</p>
-<p>docker exec -it mysql &#x2F;bin&#x2F;bash</p>
+<p>docker exec -it mysql /bin/bash</p>
 <p>登录mysql：</p>
 <p>mysql -u root -p</p>
 <p>如果顺利进入，安装成功</p>
 <h2 id="5、安装rabbitmq"><a href="#5、安装rabbitmq" class="headerlink" title="5、安装rabbitmq"></a>5、安装rabbitmq</h2><h6 id="第一步：拉取镜像-1"><a href="#第一步：拉取镜像-1" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull rabbitmq:management</p>
-<h6 id="第二步：启动-1"><a href="#第二步：启动-1" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run -d -p 5672:5672 -p 15672:15672 –restart&#x3D;always –name rabbitmq rabbitmq:management</p>
+<h6 id="第二步：启动-1"><a href="#第二步：启动-1" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run -d -p 5672:5672 -p 15672:15672 —restart=always —name rabbitmq rabbitmq:management</p>
 <h6 id="第三步：安装延迟队列插件"><a href="#第三步：安装延迟队列插件" class="headerlink" title="第三步：安装延迟队列插件"></a>第三步：安装延迟队列插件</h6><ol>
 <li>首先下载rabbitmq_delayed_message_exchange-3.9.0.ez文件上传到RabbitMQ所在服务器，下载地址：<a target="_blank" rel="noopener" href="https://www.rabbitmq.com/community-plugins.html">https://www.rabbitmq.com/community-plugins.html</a></li>
-<li>切换到插件所在目录，执行 docker cp rabbitmq_delayed_message_exchange-3.9.0.ez rabbitmq:&#x2F;plugins 命令，将刚插件拷贝到容器内plugins目录下</li>
-<li>执行 docker exec -it rabbitmq &#x2F;bin&#x2F;bash 命令进入到容器内部，并 cd plugins 进入plugins目录</li>
+<li>切换到插件所在目录，执行 docker cp rabbitmq_delayed_message_exchange-3.9.0.ez rabbitmq:/plugins 命令，将刚插件拷贝到容器内plugins目录下</li>
+<li>执行 docker exec -it rabbitmq /bin/bash 命令进入到容器内部，并 cd plugins 进入plugins目录</li>
 <li>执行 ls -l|grep delay  命令查看插件是否copy成功</li>
 <li>在容器内plugins目录下，执行 rabbitmq-plugins enable rabbitmq_delayed_message_exchange  命令启用插件</li>
 <li>exit命令退出RabbitMQ容器内部，然后执行 docker restart rabbitmq 命令重启RabbitMQ容器</li>
 </ol>
 <h2 id="6、安装redis"><a href="#6、安装redis" class="headerlink" title="6、安装redis"></a>6、安装redis</h2><h6 id="第一步：拉取镜像-2"><a href="#第一步：拉取镜像-2" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull redis:latest</p>
-<h6 id="第二步：启动-2"><a href="#第二步：启动-2" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run -d -p 6379:6379  –restart&#x3D;always redis:latest redis-server</p>
-<h2 id="7、安装nacos"><a href="#7、安装nacos" class="headerlink" title="7、安装nacos"></a>7、安装nacos</h2><h6 id="第一步：拉取镜像-3"><a href="#第一步：拉取镜像-3" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull nacos&#x2F;nacos-server:1.4.1</p>
-<h6 id="第二步：启动-3"><a href="#第二步：启动-3" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run –env MODE&#x3D;standalone –name nacos –restart&#x3D;always -d -p 8848:8848 -e JVM_XMS&#x3D;512m -e JVM_XMX&#x3D;512m nacos&#x2F;nacos-server:1.4.1</p>
-<h2 id="8、安装sentinel"><a href="#8、安装sentinel" class="headerlink" title="8、安装sentinel"></a>8、安装sentinel</h2><h6 id="第一步：拉取镜像-4"><a href="#第一步：拉取镜像-4" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull bladex&#x2F;sentinel-dashboard</p>
-<h6 id="第二步：启动-4"><a href="#第二步：启动-4" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run –name sentinel-dashboard –restart&#x3D;always -p 8858:8858 -d bladex&#x2F;sentinel-dashboard:latest</p>
+<h6 id="第二步：启动-2"><a href="#第二步：启动-2" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run -d -p 6379:6379  —restart=always redis:latest redis-server</p>
+<h2 id="7、安装nacos"><a href="#7、安装nacos" class="headerlink" title="7、安装nacos"></a>7、安装nacos</h2><h6 id="第一步：拉取镜像-3"><a href="#第一步：拉取镜像-3" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull nacos/nacos-server:1.4.1</p>
+<h6 id="第二步：启动-3"><a href="#第二步：启动-3" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run —env MODE=standalone —name nacos —restart=always -d -p 8848:8848 -e JVM_XMS=512m -e JVM_XMX=512m nacos/nacos-server:1.4.1</p>
+<h2 id="8、安装sentinel"><a href="#8、安装sentinel" class="headerlink" title="8、安装sentinel"></a>8、安装sentinel</h2><h6 id="第一步：拉取镜像-4"><a href="#第一步：拉取镜像-4" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull bladex/sentinel-dashboard</p>
+<h6 id="第二步：启动-4"><a href="#第二步：启动-4" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run —name sentinel-dashboard —restart=always -p 8858:8858 -d bladex/sentinel-dashboard:latest</p>
 <h2 id="9、安装elasticsearch"><a href="#9、安装elasticsearch" class="headerlink" title="9、安装elasticsearch"></a>9、安装elasticsearch</h2><h6 id="第一步：拉取镜像-5"><a href="#第一步：拉取镜像-5" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull elasticsearch:7.8.0</p>
 <h6 id="第二步：启动-5"><a href="#第二步：启动-5" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>需要建立：两个文件夹</p>
-<p>mkdir -p &#x2F;mydata&#x2F;elasticsearch&#x2F;plugins</p>
-<p>mkdir -p &#x2F;mydata&#x2F;elasticsearch&#x2F;data</p>
-<p>授予权限chmod 777 &#x2F;mydata&#x2F;elasticsearch&#x2F;data</p>
-<p>docker run -p 9200:9200 -p 9300:9300 –name elasticsearch –restart&#x3D;always -e “discovery.type&#x3D;single-node” -e ES_JAVA_OPTS&#x3D;”-Xms512m -Xmx512m” -v &#x2F;mydata&#x2F;elasticsearch&#x2F;plugins:&#x2F;usr&#x2F;share&#x2F;elasticsearch&#x2F;plugins -v &#x2F;mydata&#x2F;elasticsearch&#x2F;data:&#x2F;usr&#x2F;share&#x2F;elasticsearch&#x2F;data -d elasticsearch:7.8.0</p>
+<p>mkdir -p /mydata/elasticsearch/plugins</p>
+<p>mkdir -p /mydata/elasticsearch/data</p>
+<p>授予权限chmod 777 /mydata/elasticsearch/data</p>
+<p>docker run -p 9200:9200 -p 9300:9300 —name elasticsearch —restart=always -e “discovery.type=single-node” -e ES_JAVA_OPTS=”-Xms512m -Xmx512m” -v /mydata/elasticsearch/plugins:/usr/share/elasticsearch/plugins -v /mydata/elasticsearch/data:/usr/share/elasticsearch/data -d elasticsearch:7.8.0</p>
 <h6 id="第三步：安装中文分词器"><a href="#第三步：安装中文分词器" class="headerlink" title="第三步：安装中文分词器"></a>第三步：安装中文分词器</h6><ol>
 <li>下载elasticsearch-analysis-ik-7.8.0.zip</li>
 <li>上传解压：unzip elasticsearch-analysis-ik-7.8.0.zip -d ik-analyzer</li>
-<li>上传到es容器：docker cp .&#x2F;ik-analyzer a24eb9941759:&#x2F;usr&#x2F;share&#x2F;elasticsearch&#x2F;plugins &#x2F;&#x2F;&#x2F;  docker cp .&#x2F;ik-analyzer elasticsearch:&#x2F;usr&#x2F;share&#x2F;elasticsearch&#x2F;plugins</li>
+<li>上传到es容器：docker cp ./ik-analyzer a24eb9941759:/usr/share/elasticsearch/plugins ///  docker cp ./ik-analyzer elasticsearch:/usr/share/elasticsearch/plugins</li>
 <li>重启es：docker restart a24eb9941759</li>
 </ol>
 <p>a24eb9941759：表示容器ID 运行时，需要改成自己的容器ID</p>
 <h2 id="10-、安装kibana"><a href="#10-、安装kibana" class="headerlink" title="10 、安装kibana"></a>10 、安装kibana</h2><h6 id="第一步：拉取镜像-6"><a href="#第一步：拉取镜像-6" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull kibana:7.8.0</p>
-<h6 id="第二步：启动-6"><a href="#第二步：启动-6" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run –name kibana –restart&#x3D;always -e ELASTICSEARCH_URL&#x3D;<a target="_blank" rel="noopener" href="http://192.168.6.103:9200/">http://192.168.6.103:9200</a> -p 5601:5601 -d kibana:7.8.0</p>
-<p>进入容器修改：docker exec -it 1e12f8dd3efd &#x2F;bin&#x2F;bash  &#x2F;&#x2F;&#x2F;   docker exec -it kibana &#x2F;bin&#x2F;bash</p>
+<h6 id="第二步：启动-6"><a href="#第二步：启动-6" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run —name kibana —restart=always -e ELASTICSEARCH_URL=<a target="_blank" rel="noopener" href="http://192.168.6.103:9200">http://192.168.6.103:9200</a> -p 5601:5601 -d kibana:7.8.0</p>
+<p>进入容器修改：docker exec -it 1e12f8dd3efd /bin/bash  ///   docker exec -it kibana /bin/bash</p>
 <p>cd config</p>
 <p>vi kibana.yml</p>
-<p>elasticsearch.hosts: [ “<a target="_blank" rel="noopener" href="http://192.168.200.129:9200/">http://192.168.200.129:9200</a>“ ]</p>
+<p>elasticsearch.hosts: [ “<a target="_blank" rel="noopener" href="http://192.168.200.129:9200">http://192.168.200.129:9200</a>“ ]</p>
 <p>docker restart 1dc0f78d78ad 重启kibana ！</p>
 <p>测试：安装分词词库是否可以使用！</p>
-<p>GET &#x2F;.kibana&#x2F;_analyze</p>
+<p>GET /.kibana/_analyze</p>
 <p>{</p>
 <p>“text”: “我是中国人”,</p>
 <p>“analyzer”: “ik_max_word”</p>
 <p>}</p>
-<h2 id="11、安装zipkin"><a href="#11、安装zipkin" class="headerlink" title="11、安装zipkin"></a>11、安装zipkin</h2><h6 id="第一步：拉取镜像-7"><a href="#第一步：拉取镜像-7" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull openzipkin&#x2F;zipkin</p>
-<h6 id="第二步：启动-7"><a href="#第二步：启动-7" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run –name zipkin –restart&#x3D;always -d -p 9411:9411 openzipkin&#x2F;zipkin</p>
-<h2 id="12、安装minio"><a href="#12、安装minio" class="headerlink" title="12、安装minio"></a>12、安装minio</h2><h6 id="第一步：拉取镜像-8"><a href="#第一步：拉取镜像-8" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull minio&#x2F;minio</p>
-<h6 id="第二步：启动-8"><a href="#第二步：启动-8" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run \ -p 9000:9000 \ -p 9001:9001 \ –name minio \ -d –restart&#x3D;always \ -e “MINIO_ROOT_USER&#x3D;admin” \ -e “MINIO_ROOT_PASSWORD&#x3D;admin123456” \ -v &#x2F;home&#x2F;data:&#x2F;data \ -v &#x2F;home&#x2F;config:&#x2F;root&#x2F;.minio \ minio&#x2F;minio server &#x2F;data –console-address “:9001”</p>
-<p>浏览器访问：<a target="_blank" rel="noopener" href="http://ip:9000/minio/login%EF%BC%8C">http://IP:9000/minio/login，</a></p>
+<h2 id="11、安装zipkin"><a href="#11、安装zipkin" class="headerlink" title="11、安装zipkin"></a>11、安装zipkin</h2><h6 id="第一步：拉取镜像-7"><a href="#第一步：拉取镜像-7" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull openzipkin/zipkin</p>
+<h6 id="第二步：启动-7"><a href="#第二步：启动-7" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run —name zipkin —restart=always -d -p 9411:9411 openzipkin/zipkin</p>
+<h2 id="12、安装minio"><a href="#12、安装minio" class="headerlink" title="12、安装minio"></a>12、安装minio</h2><h6 id="第一步：拉取镜像-8"><a href="#第一步：拉取镜像-8" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull minio/minio</p>
+<h6 id="第二步：启动-8"><a href="#第二步：启动-8" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run \ -p 9000:9000 \ -p 9001:9001 \ —name minio \ -d —restart=always \ -e “MINIO_ROOT_USER=admin” \ -e “MINIO_ROOT_PASSWORD=admin123456” \ -v /home/data:/data \ -v /home/config:/root/.minio \ minio/minio server /data —console-address “:9001”</p>
+<p>浏览器访问：<a target="_blank" rel="noopener" href="http://IP:9000/minio/login，">http://IP:9000/minio/login，</a></p>
 <h2 id="13-、安装logstash"><a href="#13-、安装logstash" class="headerlink" title="13 、安装logstash"></a>13 、安装logstash</h2><h6 id="第一步：拉取镜像-9"><a href="#第一步：拉取镜像-9" class="headerlink" title="第一步：拉取镜像"></a>第一步：拉取镜像</h6><p>docker pull logstash:7.8.0</p>
-<h6 id="第二步：启动-9"><a href="#第二步：启动-9" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run –name logstash -p 5044:5044 –restart&#x3D;always –link elasticsearch:es -v &#x2F;mydata&#x2F;logstash&#x2F;logstash.conf:&#x2F;usr&#x2F;share&#x2F;logstash&#x2F;pipeline&#x2F;logstash.conf -d logstash:7.8.0</p>
-<p>–net root_default \</p>
+<h6 id="第二步：启动-9"><a href="#第二步：启动-9" class="headerlink" title="第二步：启动"></a>第二步：启动</h6><p>docker run —name logstash -p 5044:5044 —restart=always —link elasticsearch:es -v /mydata/logstash/logstash.conf:/usr/share/logstash/pipeline/logstash.conf -d logstash:7.8.0</p>
+<p>—net root_default \</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
-<th># 需要提前在linux服务器上环境 &#x2F;mydata&#x2F;logstash&#x2F;logstash.conf	logstash.conf	input {	 tcp {		mode &#x3D;&gt; “server”		host &#x3D;&gt; “0.0.0.0”		port &#x3D;&gt; 5044		codec &#x3D;&gt; json_lines	 }	}	filter{	 	}	output {	 elasticsearch {		hosts &#x3D;&gt; “192.168.6.103:9200”		index &#x3D;&gt; “gmall-%{+YYYY.MM.dd}”	 }	}</th>
+<th># 需要提前在linux服务器上环境 /mydata/logstash/logstash.conf    logstash.conf    input {     tcp {        mode =&gt; “server”        host =&gt; “0.0.0.0”        port =&gt; 5044        codec =&gt; json_lines     }    }    filter{         }    output {     elasticsearch {        hosts =&gt; “192.168.6.103:9200”        index =&gt; “gmall-%{+YYYY.MM.dd}”     }    }</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td></td>
 </tr>
-</tbody></table>
+</tbody>
+</table>
+</div>
 <h1 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h1><p>停止所有的容器</p>
 <p>docker stop $(docker ps -aq)</p>
 <p>删除所有的容器</p>
@@ -289,7 +293,7 @@ gtag('config', '5757554821');
 <p>docker rmi $(docker images -q)</p>
 <p>问题：</p>
 <p>Docker容器做端口映射报错</p>
-<p>docker: Error response from daemon: driver failed programming external connectivity on endpoint lamp3 (46b7917c940f7358948e55ec2df69a4dec2c6c7071b002bd374e8dbf0d40022c): (iptables failed: iptables –wait -t nat -A DOCKER -p tcp -d 0&#x2F;0 –dport 86 -j DNAT –to-destination 172.17.0.2:80 ! -i docker0: iptables: No chain&#x2F;target&#x2F;match by that name.</p>
+<p>docker: Error response from daemon: driver failed programming external connectivity on endpoint lamp3 (46b7917c940f7358948e55ec2df69a4dec2c6c7071b002bd374e8dbf0d40022c): (iptables failed: iptables —wait -t nat -A DOCKER -p tcp -d 0/0 —dport 86 -j DNAT —to-destination 172.17.0.2:80 ! -i docker0: iptables: No chain/target/match by that name.</p>
 <p>解决方法</p>
 <p>docker服务启动时定义的自定义链DOCKER被清除</p>
 <p>重启即可systemctl restart docker</p>
