@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>page | 纸飞机的旅行</title><meta name="author" content="GISer"><meta name="copyright" content="GISer"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="针对作坐标系这边参考网上以及自己的一些理解大家可以参考学习一下。 [TOC] 一、GIS 坐标系要想在 Cesium 开发中得心应手，就得熟悉 Cesium 中常用的坐标类型，以及它们之间是如何进行转换的。等真正要用的时候，还可以再回来仔细研究，加深理解。 二、经纬度坐标（球面坐标）经纬度坐标通常被叫做地理坐标或者地球坐标哦。它是一种基于地球表面的坐标系统，专门用来确定地球上任何一个点的位置呢。这">
+<meta property="og:type" content="article">
+<meta property="og:title" content="page">
+<meta property="og:url" content="https://jhcgnb.cn/posts/140ab620/index.html">
+<meta property="og:site_name" content="纸飞机的旅行">
+<meta property="og:description" content="针对作坐标系这边参考网上以及自己的一些理解大家可以参考学习一下。 [TOC] 一、GIS 坐标系要想在 Cesium 开发中得心应手，就得熟悉 Cesium 中常用的坐标类型，以及它们之间是如何进行转换的。等真正要用的时候，还可以再回来仔细研究，加深理解。 二、经纬度坐标（球面坐标）经纬度坐标通常被叫做地理坐标或者地球坐标哦。它是一种基于地球表面的坐标系统，专门用来确定地球上任何一个点的位置呢。这">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://jhcgnb.cn/img/adaver.png">
+<meta property="article:published_time" content="2024-09-07T13:51:30.000Z">
+<meta property="article:modified_time" content="2024-09-07T14:02:13.165Z">
+<meta property="article:author" content="GISer">
+<meta property="article:tag" content="Cesium">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://jhcgnb.cn/img/adaver.png"><link rel="shortcut icon" href="/img/adaver.png"><link rel="canonical" href="https://jhcgnb.cn/posts/140ab620/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="baidu-site-verification" content="codeva-Iy1bfAu5vL"/><meta name="google-site-verification" content="wN-6FUBZ4DJeo_lSZyCGmnnTBKG3n0H20plO_qsfTPM"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c6e8056e906ef79846cd727f753be936";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=5757554821"></script><script>window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '5757554821');
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'page',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-09-07 22:02:13'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/rss2.xml" title="纸飞机的旅行" type="application/rss+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/adaver.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://telegraph-image-a7r.pages.dev/file/5fa2fb441c6bd9f291776.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="纸飞机的旅行"><span class="site-name">纸飞机的旅行</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/shuoshuo/"><i class="fa-fw fa fa-comments-o"></i><span> 分享</span></a></li><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/music/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 影视</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/comment/"><i class="fa-fw fa fa-paper-plane"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">page</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-09-07T13:51:30.000Z" title="发表于 2024-09-07 21:51:30">2024-09-07</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-09-07T14:02:13.165Z" title="更新于 2024-09-07 22:02:13">2024-09-07</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>7分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="page"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p><em>针对作坐标系这边参考网上以及自己的一些理解大家可以参考学习一下。</em></p>
+<p>[TOC]</p>
+<h3 id="一、GIS-坐标系"><a href="#一、GIS-坐标系" class="headerlink" title="一、GIS 坐标系"></a><strong>一、GIS 坐标系</strong></h3><p>要想在 Cesium 开发中得心应手，就得熟悉 Cesium 中常用的坐标类型，以及它们之间是如何进行转换的。等真正要用的时候，还可以再回来仔细研究，加深理解。</p>
+<h3 id="二、经纬度坐标（球面坐标）"><a href="#二、经纬度坐标（球面坐标）" class="headerlink" title="二、经纬度坐标（球面坐标）"></a><strong>二、经纬度坐标（球面坐标）</strong></h3><p>经纬度坐标通常被叫做地理坐标或者地球坐标哦。它是一种基于地球表面的坐标系统，专门用来确定地球上任何一个点的位置呢。这个坐标系统主要用两个数值来表示位置，那就是经度和纬度。</p>
+<ol>
+<li><strong>经度（Longitude）</strong>：它表示的是从本初子午线（一般是通过英国伦敦的格林尼治天文台那条线）向东或者向西的角度距离。经度的范围是从 -180° 到 +180°，其中 0° 就代表本初子午线。</li>
+<li><strong>纬度（Latitude）</strong>：表示从赤道向北或者向南的角度距离。纬度的范围是从 -90°（南极点）到 +90°（北极点），而 0° 呢，就表示赤道。</li>
+</ol>
+<p>经纬度坐标也常常被称作：</p>
+<ul>
+<li><strong>球面坐标（Spherical Coordinates）</strong>：因为地球近似是一个球体嘛，所以经纬度坐标就可以看作是在球面上确定点的位置。</li>
+<li><strong>大地坐标（Geodetic Coordinates）</strong>：在大地测量学当中，这种坐标系统是用来描述地球表面上的点的。</li>
+<li><strong>WGS84 坐标</strong>：WGS84（World Geodetic System 1984）是一种被广泛使用的全球地理坐标系统哦。它提供了一个标准化的参考框架，专门用于地理定位呢。</li>
+</ul>
+<p>经纬度坐标的应用可广泛啦，在地图制作、导航、地理信息系统（GIS）、航空和海洋导航等领域都能看到它的身影。在数字地图服务和应用程序当中，经纬度坐标更是最常见的位置表示方式之一呢。</p>
+<h3 id="三、地理坐标（弧度）"><a href="#三、地理坐标（弧度）" class="headerlink" title="三、地理坐标（弧度）"></a><strong>三、地理坐标（弧度）</strong></h3><p>在地理信息系统（GIS）里呀，地理坐标通常指的是地球上某个点的位置，用经纬度来表示。不过呢，因为地球是一个近似的椭球体，要是用弧度而不是角度来表示经纬度坐标的话，就可以避免在计算当中引入一些复杂的情况，特别是在进行距离和面积的测量的时候。</p>
+<p>弧度是一种角度的度量单位哦，它是基于圆的周长和半径之间的关系来定义的。一个完整的圆周被定义为 2π 弧度。弧度和角度的转换关系是这样的：比如角度转弧度，就是用角度值乘以 π&#x2F;180；弧度转角度呢，就是用弧度值乘以 180&#x2F;π。</p>
+<p>在 GIS 中，使用弧度的地理坐标可以简化一些数学运算哦，尤其是涉及到三角函数和地球曲率的计算。比如说，在计算两点之间的大圆距离（也就是地球表面的最短路径）的时候，用弧度就可以更直接地应用球面三角学公式呢。</p>
+<p><strong>地理坐标（弧度）的应用</strong>：</p>
+<ol>
+<li><strong>距离计算</strong>：使用球面三角学公式，可以更准确地算出两点之间的距离哦。</li>
+<li><strong>方向计算</strong>：要确定从一个点到另一个点的方向，用弧度可以简化计算过程呢。</li>
+<li><strong>地图投影</strong>：在某些地图投影中，使用弧度可以更自然地处理地球表面的曲率问题。</li>
+</ol>
+<h3 id="四、屏幕坐标系"><a href="#四、屏幕坐标系" class="headerlink" title="四、屏幕坐标系"></a><strong>四、屏幕坐标系</strong></h3><p>屏幕坐标系是一种二维坐标系统，专门用来描述屏幕上的点或者区域的位置。在屏幕坐标系当中，通常是以屏幕的左上角为原点，水平向右是 x 轴正方向，垂直向下是 y 轴正方向。在 Cesium 中，屏幕坐标系也被叫做二维笛卡尔平面坐标哦。</p>
+<p>可以这样来创建屏幕坐标系中的一个点：<code>new Cesium.Cartesian2(x, y)</code>。</p>
+<p>屏幕坐标系有这些特点呢：</p>
+<ol>
+<li><strong>原点位置</strong>：屏幕坐标系的原点（0,0）就在屏幕的左上角。</li>
+<li><strong>正方向</strong>：x 轴正方向是向右的，y 轴正方向是向下的。</li>
+<li><strong>单位</strong>：通常使用像素（px）作为单位。</li>
+<li><strong>范围</strong>：坐标值的范围取决于屏幕或者窗口的大小。</li>
+</ol>
+<h3 id="五、空间直角坐标系"><a href="#五、空间直角坐标系" class="headerlink" title="五、空间直角坐标系"></a><strong>五、空间直角坐标系</strong></h3><p>在地理信息系统（GIS）中，空间直角坐标系是一种三维坐标系统哦，它可以在三维空间中非常精确地表示点、线、面的位置。这种坐标系一般是由三个正交的坐标轴组成，也就是 X、Y 和 Z 轴。</p>
+<p>空间直角坐标系有这些特点：</p>
+<ol>
+<li><strong>正交性</strong>：X、Y 和 Z 轴是相互垂直的，形成了一个直角坐标系。</li>
+<li><strong>三维性</strong>：可以表示三维空间中的任何位置呢，包括高度或者深度信息。</li>
+<li><strong>标准化</strong>：通常是以地球的质心或者某个参考点为原点，建立起一个标准化的坐标系统。</li>
+<li><strong>应用广泛</strong>：在地理测量、城市规划、建筑设计、3D 建模等领域都有广泛的应用。</li>
+</ol>
+<h3 id="六、Cesium-中的坐标系"><a href="#六、Cesium-中的坐标系" class="headerlink" title="六、Cesium 中的坐标系"></a><strong>六、Cesium 中的坐标系</strong></h3><p>Cesium 中支持两种坐标系呢，分别是 3D 笛卡尔坐标系和经纬度坐标系。</p>
+<ol>
+<li>3D 笛卡尔坐标系<ul>
+<li>先来了解一下笛卡尔空间直角坐标系哈。它的 X、Y、Z 三个轴的正方向如下图所示。坐标系的原点是在地球的中心哦。所以呀，这些坐标通常是负的。单位一般是米。可以这样来创建一个 3D 笛卡尔坐标系中的点：<code>Cesium.Cartesian3(x, y, z)</code>。</li>
+</ul>
+</li>
+<li>地理坐标系<ul>
+<li>这是一种基于经度和纬度的坐标系，用度数来表示位置。在 Cesium 中，可以通过将经度、纬度和高度值传递给 Cartographic 对象来表示地理坐标哦。其中经度和纬度是以度数表示的，高度值可以是以米或其他单位表示的。Cesium 会把地理坐标转换为笛卡尔坐标，这样就能在地球表面上进行可视化啦。</li>
+</ul>
+</li>
+</ol>
+<h3 id="七、坐标系转换"><a href="#七、坐标系转换" class="headerlink" title="七、坐标系转换"></a><strong>七、坐标系转换</strong></h3><p>Cesium 提供了很多可以进行坐标系互相转换的大类呢。</p>
+<ol>
+<li><strong>经纬度转空间直角</strong>：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> cartesian3 = <span class="title class_">Cesium</span>.<span class="property">Cartesian3</span>.<span class="title function_">fromDegrees</span>(lng, lat, height);</span><br></pre></td></tr></table></figure>
+
+<p>这段代码的意思就是，把经度（lng）、纬度（lat）和高度（height）表示的经纬度坐标转换为空间直角坐标系中的一个点。</p>
+<ol start="2">
+<li><strong>经纬度转地理坐标（弧度）</strong>：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> radians = <span class="title class_">Cesium</span>.<span class="property">Math</span>.<span class="title function_">toRadians</span>(degrees);</span><br></pre></td></tr></table></figure>
+
+<p>这里呢，是把用角度表示的度数（degrees）转换为弧度（radians），也就是把经纬度从角度表示转换为弧度表示。</p>
+<ol start="3">
+<li><strong>地理坐标（弧度）转经纬度</strong>：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> degrees = <span class="title class_">Cesium</span>.<span class="property">Math</span>.<span class="title function_">toDegrees</span>(radians);</span><br></pre></td></tr></table></figure>
+
+<p>和上面相反，把弧度（radians）表示的地理坐标转换为用角度表示的经纬度度数（degrees）。</p>
+<ol start="4">
+<li><strong>空间直角转经纬度</strong>：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 先将 3D 笛卡尔坐标转为地理坐标（弧度）</span></span><br><span class="line"><span class="keyword">const</span> cartographic = <span class="title class_">Cesium</span>.<span class="property">Cartographic</span>.<span class="title function_">fromCartesian</span>(cartesian3);</span><br><span class="line"><span class="comment">// 再将地理坐标（弧度）转为经纬度</span></span><br><span class="line"><span class="keyword">const</span> lat = <span class="title class_">Cesium</span>.<span class="property">Math</span>.<span class="title function_">toDegrees</span>(cartographic.<span class="property">latitude</span>);</span><br><span class="line"><span class="keyword">const</span> lng = <span class="title class_">Cesium</span>.<span class="property">Math</span>.<span class="title function_">toDegrees</span>(cartographic.<span class="property">longitude</span>);</span><br><span class="line"><span class="keyword">const</span> height = cartographic.<span class="property">height</span>;</span><br></pre></td></tr></table></figure>
+
+<p>首先把空间直角坐标系中的点（cartesian3）转换为地理坐标（弧度）表示的 Cartographic 对象，然后再把这个对象中的纬度和经度从弧度转换为角度，就得到了经纬度坐标，同时还能得到高度值。</p>
+<ol start="5">
+<li><strong>屏幕坐标转经纬度</strong>：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 监听点击事件，拾取坐标</span></span><br><span class="line"><span class="keyword">const</span> handler = <span class="keyword">new</span> <span class="title class_">Cesium</span>.<span class="title class_">ScreenSpaceEventHandler</span>(viewer.<span class="property">scene</span>.<span class="property">canvas</span>);</span><br><span class="line">handler.<span class="title function_">setInputAction</span>(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> clickPosition = viewer.<span class="property">scene</span>.<span class="property">camera</span>.<span class="title function_">pickEllipsoid</span>(e.<span class="property">position</span>);</span><br><span class="line">    <span class="keyword">const</span> radiansPos = <span class="title class_">Cesium</span>.<span class="property">Cartographic</span>.<span class="title function_">fromCartesian</span>(clickPosition);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(</span><br><span class="line">        <span class="string">&quot;经度：&quot;</span> +</span><br><span class="line">        <span class="title class_">Cesium</span>.<span class="property">Math</span>.<span class="title function_">toDegrees</span>(radiansPos.<span class="property">longitude</span>) +</span><br><span class="line">        <span class="string">&quot;, 纬度：&quot;</span> +</span><br><span class="line">        <span class="title class_">Cesium</span>.<span class="property">Math</span>.<span class="title function_">toDegrees</span>(radiansPos.<span class="property">latitude</span>)</span><br><span class="line">    );</span><br><span class="line">&#125;, <span class="title class_">Cesium</span>.<span class="property">ScreenSpaceEventType</span>.<span class="property">LEFT_CLICK</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这里是通过监听屏幕的点击事件，当用户在屏幕上点击时，获取点击位置对应的地球上的点（clickPosition），然后把这个点从笛卡尔坐标转换为地理坐标（弧度）表示的对象，最后再把这个对象中的经度和纬度从弧度转换为角度，就得到了点击位置对应的经纬度坐标。</p>
+<ol start="6">
+<li><strong>屏幕坐标转空间直角坐标</strong>：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> cartesian3 = viewer.<span class="property">scene</span>.<span class="property">globe</span>.<span class="title function_">pick</span>(viewer.<span class="property">camera</span>.<span class="title function_">getPickRay</span>(windowPostion), viewer.<span class="property">scene</span>);</span><br></pre></td></tr></table></figure>
+
+<p>根据屏幕坐标（windowPostion），通过相机的射线拾取方法，获取对应的空间直角坐标系中的点。</p>
+<ol start="7">
+<li><strong>世界坐标转屏幕坐标</strong>：</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">windowPostion = <span class="title class_">Cesium</span>.<span class="property">SceneTransforms</span>.<span class="title function_">wgs84ToWindowCoordinates</span>(viewer.<span class="property">scene</span>, cartesian3);</span><br></pre></td></tr></table></figure>
+
+<p>把世界坐标（一般是经纬度坐标转换后的空间直角坐标）表示的点（cartesian3）转换为屏幕坐标（windowPostion）。</p>
+<p>欢迎您关注我的原创公众号【GISer世界】，不定期分享资源以及GIS面试题，本期分享到这里就结束了。</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://25b7700e.telegraph-image-a7r.pages.dev/file/3bafbf1750de9058f0075.jpg"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jhcgnb.cn">GISer</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jhcgnb.cn/posts/140ab620/">https://jhcgnb.cn/posts/140ab620/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jhcgnb.cn" target="_blank">纸飞机的旅行</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Cesium/">Cesium</a></div><div class="post_share"><div class="social-share" data-image="/img/adaver.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/325c2834/" title="WebGIS面试题（第九期）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">WebGIS面试题（第九期）</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/posts/a98e3ede/" title="Cesium面试题"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/category_img.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2023-07-03</div><div class="title">Cesium面试题</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC81ODY2OC8zNTEzMA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/img/adaver.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">GISer</div><div class="author-info__description">选择有时候比努力更重要</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">35</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Jinhe404"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/Jinhe404" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/jhcgnb@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a><a class="social-icon" href="https://blog.csdn.net/weixin_44857463?type=blog" target="_blank" title="CSDN"><i class="fa fa-book-open"></i></a><a class="social-icon" href="tencent://AddContact/?fromId=45&amp;fromSubId=1&amp;subcmd=all&amp;uin=31025287432&amp;website=www.oicqzone.com" target="_blank" title="QQ"><i class="fab fa-qq"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81GIS-%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-number">1.</span> <span class="toc-text">一、GIS 坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E7%BB%8F%E7%BA%AC%E5%BA%A6%E5%9D%90%E6%A0%87%EF%BC%88%E7%90%83%E9%9D%A2%E5%9D%90%E6%A0%87%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">二、经纬度坐标（球面坐标）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%9C%B0%E7%90%86%E5%9D%90%E6%A0%87%EF%BC%88%E5%BC%A7%E5%BA%A6%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">三、地理坐标（弧度）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%B1%8F%E5%B9%95%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-number">4.</span> <span class="toc-text">四、屏幕坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%A9%BA%E9%97%B4%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-number">5.</span> <span class="toc-text">五、空间直角坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%AD%E3%80%81Cesium-%E4%B8%AD%E7%9A%84%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-number">6.</span> <span class="toc-text">六、Cesium 中的坐标系</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E5%9D%90%E6%A0%87%E7%B3%BB%E8%BD%AC%E6%8D%A2"><span class="toc-number">7.</span> <span class="toc-text">七、坐标系转换</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/140ab620/" title="page">page</a><time datetime="2024-09-07T13:51:30.000Z" title="发表于 2024-09-07 21:51:30">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/325c2834/" title="WebGIS面试题（第九期）">WebGIS面试题（第九期）</a><time datetime="2024-09-07T13:48:36.000Z" title="发表于 2024-09-07 21:48:36">2024-09-07</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/e89aff94/" title="linux系统下环境部署">linux系统下环境部署</a><time datetime="2024-08-12T07:49:45.120Z" title="发表于 2024-08-12 15:49:45">2024-08-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/f8ffd5a4/" title="（windows系统环境下）ollama + fastgpt搭建本地私有大模型">（windows系统环境下）ollama + fastgpt搭建本地私有大模型</a><time datetime="2024-07-27T15:55:47.616Z" title="发表于 2024-07-27 23:55:47">2024-07-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4b0d6ffc/" title="（linux系统环境下）ollama + fastgpt搭建本地私有大模型">（linux系统环境下）ollama + fastgpt搭建本地私有大模型</a><time datetime="2024-07-27T15:54:16.620Z" title="发表于 2024-07-27 23:54:16">2024-07-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By GISer</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js"></script><div class="js-pjax"><script>function loadLivere () {
+  if (typeof LivereTower === 'object') {
+    window.LivereTower.init()
+  }
+  else {
+    (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+    })(document, 'script');
+  }
+}
+
+if ('Livere' === 'Livere' || !true) {
+  if (true) btf.loadComment(document.getElementById('lv-container'), loadLivere)
+  else loadLivere()
+}
+else {
+  function loadOtherComment () {
+    loadLivere()
+  }
+}</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-nest.min.js"></script><script id="click-heart" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-heart.min.js" async="async" mobile="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="富强,民主,文明,和谐,平等,公正,法治,爱国,敬业,诚信,友善" data-fontsize="15px" data-random="false" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div class="no-result" id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/haruto.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body></html>
